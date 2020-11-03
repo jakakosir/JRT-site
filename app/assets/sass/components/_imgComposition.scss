@@ -1,0 +1,117 @@
+.imageComposition {
+    position: relative;
+    margin:-1rem 0rem 0rem 7rem;
+
+    @include respond(tab-land) {
+        margin: 9rem 0rem 0rem 7rem;
+     }
+
+     @include respond(tab-port) {
+        margin: -8rem -6rem 0rem -6rem;
+     }
+
+    &__image {
+        width: 100%;
+        
+       
+    }
+    
+    &:hover &__photo:not(:hover) {
+        transform: scale(.9);
+    }
+
+    &__photo {
+        width: 40%;
+        position: absolute;
+        box-shadow: 0 1.5rem 2.5rem rgba($color-black, .5);
+        transition: all .5s;
+       
+
+        @include respond(tab-port) {
+           width: 33.3333%;
+           position: relative;
+           float: left;
+          
+        }
+       
+
+        
+
+        &--caption {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            color: $color-red-primary;
+            font-size: 1rem;
+            opacity:0;
+            text-shadow:  0 1.5rem 2.5rem rgba($color-black, .5);
+            transform: translate(-50%, -50%);
+            transition: all .5s
+        }
+
+        &:hover {
+            z-index: 100;
+            transform: scale(1.1);
+            outline: .2rem solid $color-red-primary;
+            outline-offset: .7rem;
+
+            @include respond(tab-port) {
+                transform: scale(1.3);
+                
+             }
+
+        }
+
+        &:hover &--caption {
+            opacity:1;
+            top:-3rem;
+            font-size: $medium-font-size;
+            font-weight: 400;
+        }
+
+        &:hover &--caption-3 {
+            top:-10rem;
+
+            @include respond(tab-port) {
+                top: -3rem;
+                
+             }
+        }
+
+        
+
+        &--p1 {
+            top: 15rem;
+            left: 15.5rem;
+            z-index: 1;
+
+            @include respond(tab-port) {
+               top: 18rem;
+               left: 3rem;
+            }
+        }
+
+        &--p2{
+            top: 5rem;
+            left: 15rem;
+            z-index: 0;
+
+            @include respond(tab-port) {
+                top: 13rem;
+                left: 0rem;
+            }
+        }
+
+        &--p3 {
+            top: 7rem;
+            left: 3rem;
+            z-index: 2;
+
+            @include respond(tab-port) {
+                top: 10rem;
+                left: -3rem;
+            }
+        }
+    }
+
+}

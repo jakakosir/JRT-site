@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem= 10px
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 43.75%;
+    }
+
+    @include respond(big-desk) {
+        font-size: 75%;
+    }
+
+}
+
+body {
+    padding: 2.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+
+}
+
+::selection {
+    background-color: $color-red-primary;
+    color:$color-grey-light;
+}
+
+.page {
+    display: block;
+    animation: fade 1s;
+    };

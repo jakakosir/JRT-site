@@ -1,0 +1,130 @@
+.footer {
+    position: relative;
+   //background-image: linear-gradient($color-black-primary, $color-red-primary);
+    background-color: $color-black-primary;
+    width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+
+
+   &__left {
+       margin: 2rem;
+       text-align: center;
+   }
+
+   &__right {
+    margin: 2rem;
+    text-align: center;
+   }
+
+    &__social {
+        width: 100%;
+        //margin: 0 2rem 3rem 2rem;
+        padding-top: 1rem;
+        border-top: .1rem solid $color-grey;
+        text-align: center;
+
+        
+
+        &_icon {
+            font-size: 7rem;
+            color: $color-grey;
+            transition: all .3s;
+            margin-right: 2rem;
+
+            
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &--insta {
+
+                @include respond(tab-port) {
+                    color: white;
+                }
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            &--youtu {
+
+                @include respond(tab-port) {
+                    color: $color-red-primary;
+                }
+
+                &:hover {
+                    color:$color-red-primary
+                }
+            }
+
+            &--face {
+
+                @include respond(tab-port) {
+                    color:rgb(66, 103, 178);
+                }
+
+                &:hover {
+                    color: rgb(66, 103, 178);
+                }
+            }
+        }
+    }
+    &__navigation {
+        width: 100%;
+        position: relative;
+        }
+    
+    
+    &__lists {
+        list-style: none;
+        text-align: center;
+        padding-top: 1rem;
+        border-top: .1rem solid $color-grey;
+
+        &_list {
+            display: inline-block;
+            padding: .5rem .5rem;
+            margin: 0rem .5rem;
+            transition: .3s;
+
+            @include respond(tab-port) {
+                color: $color-red-primary;
+                box-shadow:  0.2rem 0.3rem 1rem black;
+            }
+
+            &:hover {
+                color: $color-red-primary;
+                transform: rotate(4deg) scale(1.1);
+                box-shadow:  0.2rem 0.3rem 1rem black;
+            }
+            
+
+            &--link,
+            &--link:link,
+            &--link:visited {
+                text-decoration: none;
+                font-size: $default-font-size;
+                font-weight: 900;
+                color: $color-grey;
+
+               
+                &:hover {
+                    color: $color-red-primary;
+                    
+                    
+                    
+                }
+            }
+        }
+      }
+      &__copyright {
+        padding-top: 1rem;  
+        border-top: .1rem solid $color-grey;
+        
+    }
+}
+
+

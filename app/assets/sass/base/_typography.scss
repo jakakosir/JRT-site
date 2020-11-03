@@ -1,0 +1,95 @@
+.heading {
+  //line-height: 8rem;
+
+  &__main {
+    display: block;
+    font-size: 8rem;
+    letter-spacing: 1rem;
+    font-weight: 100;
+    //font-family: 'Luckiest Guy', cursive;
+    color: white;
+    text-shadow: 0 0.8rem 0.3rem $color-black;
+    animation: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    @include respond(phone) {
+      font-size: 8rem;
+      font-weight: 300;
+    }
+  }
+
+  &__sub {
+    display: block;
+    font-size: 3.5rem;
+    color: $color-red-primary;
+    font-weight: 300;
+    //text-shadow: 0 0.8rem 0.3rem $color-black;
+    margin-bottom: 4rem;
+    animation: moveInBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: 0.7rem;
+  //font-family: 'Luckiest Guy', cursive;
+  filter: drop-shadow(0 1.5rem 1rem black);
+  background-image: linear-gradient(45deg, red, $color-black-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @include respond(phone) {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+}
+
+.heading-terthiary {
+  text-transform: uppercase;
+  color: $color-grey;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  color: $color-grey;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  hyphens: auto;
+
+  &__footer {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  &__copy {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  &__billy {
+    color: $color-grey;
+    @include respond(tab-land) {
+      color: $color-grey-billy;
+      font-weight: 300;
+    }
+  }
+
+  @include respond(tab-land) {
+    font-size: $medium-font-size;
+    line-height: 3.5rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: $big-font-size;
+  }
+}

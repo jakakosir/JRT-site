@@ -1,0 +1,43 @@
+.header {
+    position: relative;
+    height: 95vh;
+   
+    //background-attachment:fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    @include respond(tab-land) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+    }
+
+    @include respond(phone) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 100%);
+    }
+   
+
+    &__heading {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    &::before {
+       content: "";
+       position: fixed;
+       top: 0;
+       left: 0;
+       background-image: linear-gradient(to top left,rgba($color-black-primary, .1),rgba($color-black-primary, .8)), url(../img/lumberjack.jpg);
+       background-size: cover;
+       background-position: center;
+       width: 100%;
+       height: 100%;
+
+       @include respond(tab-port) {
+        background-image: linear-gradient(to top left,rgba($color-black-primary, .1),rgba($color-black-primary, .8)), url(../img/lumberjack-small-cropped.jpg);
+       }
+
+    }
+
+}

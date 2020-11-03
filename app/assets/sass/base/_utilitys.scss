@@ -1,0 +1,28 @@
+.u-center-text {
+  text-align: center !important;
+}
+.u-center-item {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 6rem !important;
+}
+.u-margin-bottom-small {
+  margin-bottom: 4rem !important;
+}
+
+.u-column-hover-animation:hover {
+  transform: translateY(-5rem);
+}
+
+.u-inline-block {
+  display: inline-block;
+}
