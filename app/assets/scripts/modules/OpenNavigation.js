@@ -6,11 +6,17 @@ class OpenNavigation {
     this.menBar1 = document.getElementById("bar1");
     this.menBar3 = document.getElementById("bar3");
     this.navButton = document.querySelector(".navigation__button");
+    this.navLink = Array.from(
+      document.querySelectorAll(".menu__list_listItem")
+    );
     this.events();
   }
 
   events() {
     this.navButton.addEventListener("click", () => this.toggleMenu());
+    this.navLink.forEach((e) =>
+      e.addEventListener("click", () => this.toggleMenu())
+    );
   }
 
   toggleMenu() {
