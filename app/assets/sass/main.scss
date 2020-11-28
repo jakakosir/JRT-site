@@ -1,40 +1,26 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
-
-
-
-
-
 
 @import "base/base";
 @import "base/typography";
 @import "base/animations";
 @import "base/utilitys";
-@import"base/revealItems";
+@import "base/revealItems";
 
+@import "components/buttons";
+@import "components/imgComposition";
+@import "components/gallery";
+@import "components/popupGallery";
+@import "components/video";
+@import "components/backGrVideo";
+@import "components/loader";
 
+@import "layout/header";
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/footer";
 
-
-
-@import"components/buttons";
-@import"components/imgComposition";
-@import"components/gallery";
-@import"components/popupGallery";
-@import"components/video";
-@import"components/backGrVideo";
-@import"components/loader";
-
-
-
-
-
-@import"layout/header";
-@import"layout/grid";
-@import"layout/navigation";
-@import"layout/footer";
-
-
-@import"pages/home";
-
-
-
+@import "pages/home";

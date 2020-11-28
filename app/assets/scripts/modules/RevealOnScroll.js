@@ -35,7 +35,7 @@ class ReveallOnScroll {
       console.log("element was calculated");
       let scrollPercent =
         (e.getBoundingClientRect().top / this.browserHight) * 100;
-      if (scrollPercent < 85) {
+      if (scrollPercent < 95) {
         e.classList.add("reveal-par--is-visible");
         e.isRevealed = true;
         if (e.isLastItem) {

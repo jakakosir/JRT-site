@@ -1,10 +1,10 @@
 .reveal-par {
   opacity: 0;
-  transform: scale(.8);
-  transition: all 2s ease-out;
+  transform: translateY(200px);
+  transition: all ease-out;
 
   &--is-visible {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0px);
   }
 }

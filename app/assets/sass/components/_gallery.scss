@@ -51,17 +51,19 @@
 
     &__nav {
         position: absolute;
-        font-size: 3rem;
+        font-size: 4rem;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
         color: white;
         z-index: 100;
-        padding: 1rem 1rem .4rem 1rem;
+        //padding: 10px;
         border-radius: 50%;
+        transition: all .3s ease;
 
         &:hover {
-            background-color: rgba($color-black-primary, .6);
+            font-size: 5rem;
+            //background-color: rgba($color-black-primary, .6);
 
             @include respond(tab-land) {
                 background-color: transparent;
@@ -84,12 +86,13 @@
         position: absolute;
         cursor: pointer;
         padding: 0 1rem;
-        font-size: 3rem;
+        font-size: 6rem;
         color: white;
         bottom: 2%;
         right: 2%;
         opacity: 0; 
         border-radius: 50%;
+        transition: all .3s ease;
         
         
 
