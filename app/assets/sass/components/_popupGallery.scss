@@ -7,14 +7,15 @@
     left: 0;
     background-color: rgba($color-black, .9);
     z-index: 10000;
-    visibility: hidden;
     opacity: 0;
     transform: scale(.25) translate(-70%, -70%);
     transition: all .5s;
+    visibility: hidden;
 
-    &__hidden {
-        visibility: hidden;
-        
+    &--opened {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
     }
 
 
@@ -28,9 +29,14 @@
     box-shadow: 0 1.5rem 2.5rem rgba($color-black, .5);
     transform: translate(-50%, -50%) scale(.25);
     transition: .5s .3s;
+
+    &--opened {
+        transform: translate(-50%, -50%) scale(1);
+    }
    
     @include respond(tab-port){
         width: 82%;
+        
     }
     
 
@@ -57,8 +63,8 @@
         transform: translateY(-50%);
         cursor: pointer;
         top: 50%;
-        padding: 1.1rem 1.1rem 0rem 1.1rem;
-        border-radius: 50%;
+       // padding: 1.1rem 1.1rem 0rem 1.1rem;
+       // border-radius: 50%;
 
         &:hover {
             color: black;
@@ -93,7 +99,7 @@
         cursor: pointer;
         top: 2rem;
         right: 3rem;
-        font-size: 10rem;
+        font-size: 5rem;
         color: white;
         padding: 1.5rem 1.5rem 0rem 1.5rem;
 
@@ -103,7 +109,7 @@
         }
 
         &:hover {
-            color: green;
+            transform: scale(1.2);
         }
     }
 
@@ -118,7 +124,4 @@
     }
 }
 
-.popupGallery-1 {
-    transform: scale(.25) translate(105%, -50%);
-}
 

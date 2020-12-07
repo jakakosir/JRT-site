@@ -1,5 +1,5 @@
 class Gallery {
-  constructor(photos,popupPhotos, prevButton, nextButton) {
+  constructor(photos, popupPhotos, prevButton, nextButton) {
     this.photoIndex = 1;
     this.photos = photos;
     this.popupPhotos = popupPhotos;
@@ -16,6 +16,7 @@ class Gallery {
 
   photoSlides(n) {
     let i;
+    //GALLERY**********************************
     if (n > this.photos.length) {
       this.photoIndex = 1;
     }
@@ -27,19 +28,17 @@ class Gallery {
     }
     this.photos[this.photoIndex - 1].style.display = "block";
 
-//POPUP GALLERY**********************************
+    //POPUP GALLERY**********************************
     if (n > this.popupPhotos.length) {
-        this.photoIndex = 1;
-      }
-      if (n < 1) {
-        this.photoIndex = this.popupPhotos.length;
-      }
-      for (i = 0; i < this.popupPhotos.length; i++) {
-        this.popupPhotos[i].style.display = "none";
-      }
-      this.popupPhotos[this.photoIndex - 1].style.display = "block";
-  
-
+      this.photoIndex = 1;
+    }
+    if (n < 1) {
+      this.photoIndex = this.popupPhotos.length;
+    }
+    for (i = 0; i < this.popupPhotos.length; i++) {
+      this.popupPhotos[i].style.display = "none";
+    }
+    this.popupPhotos[this.photoIndex - 1].style.display = "block";
   }
 
   changePhoto(n) {
