@@ -7,8 +7,7 @@ class PopupGallery {
     expandButton,
     closeButton,
     nextButton,
-    prevButton,
-    expand
+    prevButton
   ) {
     //this.injectHTML();
     this.photos = photos;
@@ -20,7 +19,7 @@ class PopupGallery {
     this.closeButton = closeButton;
     this.nextButton = nextButton;
     this.prevButton = prevButton;
-   
+
     this.events();
   }
 
@@ -45,6 +44,7 @@ class PopupGallery {
     this.popupGalleryGallery.classList.remove("popupGallery__gallery--opened");
   }
 
+ 
   photoSlides(n) {
     let i;
     //GALLERY**********************************
@@ -76,10 +76,10 @@ class PopupGallery {
     this.photoSlides((this.photoIndex = this.photoIndex + n));
   }
 
-  /*  injectHTML() {
-    document.querySelector('.page').insertAdjacentHTML(
-      "afterbegin",
-      `<div class="popupGallery" id="popup">
+  /* injectHTML() {
+    document.querySelector(".page").insertAdjacentHTML(
+      "beforeend",
+      `<div class="popupGallery">
        <div class="popupGallery__gallery">
         <figure class="popupGallery__gallery_photo">
             <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
