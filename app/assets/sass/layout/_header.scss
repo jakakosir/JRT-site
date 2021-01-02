@@ -36,6 +36,8 @@
 
        @include respond(tab-port) {
         background-image: linear-gradient(to top left,rgba($color-black-primary, .1),rgba($color-black-primary, .8)), url(../img/lumberjack-small-cropped.jpg);
+        width: 100vw;
+       height: 100vh;
        }
 
     }

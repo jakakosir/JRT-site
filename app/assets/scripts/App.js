@@ -1,34 +1,39 @@
 import "@fortawesome/fontawesome-free/js/all.js";
+import "lazysizes";
 import "../sass/main.scss";
-import OpenNavigation from "./modules/OpenNavigation";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
-//import PopupGallery from "./modules/PopupGallery";
 
-/* new PopupGallery(
-  document.querySelectorAll(".gallery__photo"),
-  document.querySelectorAll(".popupGallery__gallery_photo"),
-  document.querySelector(".popupGallery__gallery"),
-  document.querySelector(".popupGallery"),
-  document.querySelector(".gallery__expand"),
-  document.querySelector(".popupGallery__close"),
-  document.querySelector(".popupGallery__nav--next"),
-  document.querySelector(".popupGallery__nav--prev")
-); */
 
-/* new PopupGallery(
-  document.querySelectorAll(".gallery-1__photo"),
-  document.querySelectorAll(".popupGallery-1__gallery_photo"),
-  document.querySelector(".popupGallery-1__gallery"),
-  document.querySelector(".popupGallery-1"),
-  document.querySelector(".gallery-1__expand"),
-  document.querySelector(".popupGallery-1__close"),
-  document.querySelector(".popupGallery-1__nav--next"),
-  document.querySelector(".popupGallery-1__nav--prev")
-); */
+///////////////SPINNER-SCRIPT////////////////////////
 
-new OpenNavigation();
+document.onreadystatechange = setTimeout(function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("page").style.visibility = "hidden";
+    document.querySelector("#spinnerLoader").style.visibility = "visible";
+  } else {
+    document.querySelector("#spinnerLoader").style.display = "none";
+    document.querySelector("page").style.visibility = "visible";
+  }
+}, 2000);
+///////////////////////////////////////////////////////
+
 new RevealOnScroll();
+
+let openNavigation;
+document.querySelector(".navigation__button").addEventListener("click", (e) => {
+  e.preventDefault;
+  if (typeof openNavigation == "undefined") {
+    import(/* webpackChunkName: 'openNavigation' */ "./modules/OpenNavigation")
+      .then((x) => {
+        openNavigation = new x.default();
+        setTimeout(openNavigation.toggleMenu(), 20);
+      })
+      .catch(() => console.log("Something went wrong..."));
+  } else {
+    OpenNavigation.toggleMenu();
+  }
+});
 
 new Gallery(
   document.querySelectorAll(".gallery__photo"),
@@ -45,7 +50,6 @@ new Gallery(
 );
 
 let popUpGallery;
-
 document.querySelector(".gallery__expand").addEventListener("click", (e) => {
   e.preventDefault();
   if (typeof popUpGallery == "undefined") {
@@ -63,7 +67,7 @@ document.querySelector(".gallery__expand").addEventListener("click", (e) => {
         );
         setTimeout(() => popUpGallery.expandGallery(), 20);
       })
-      .catch(() => console.log("There was a problem!"));
+      .catch(() => console.log("Something went wrong..."));
   } else {
     popUpGallery.expandGallery();
   }
@@ -87,10 +91,16 @@ document.querySelector(".gallery-1__expand").addEventListener("click", (e) => {
         );
         setTimeout(() => popUpGallery1.expandGallery(), 20);
       })
-      .catch(() => console.log("There was a problem!"));
+      .catch(() => console.log("Trenutno ni mogoče naložiti galerije..."));
   } else {
     popUpGallery1.expandGallery();
   }
+});
+
+new ImgComposition();
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 20,
 });
 
 if (module.hot) {

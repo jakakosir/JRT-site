@@ -20,7 +20,7 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" type="image/x-icon">
 
 
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
@@ -30,13 +30,13 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
     <title>BILLY the JRT | O Jack russell terierjih na splošno in nekaj Billijevih slik in trikcev</title>
 </head>
 
-<!-- <body onload="loadTimeSet()">
 
-    <div class="spinnerLoader" id="spinnerLoader"> </div> -->
+
+    <div class="spinnerLoader" id="spinnerLoader"> </div>
 <div class="page" id="page">
     <div class="navigation">
         <div class="navigation__button">
@@ -49,12 +49,13 @@
 
     <div class="menu"></div>
     <ul class="menu__list" id="menu">
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" href="#">domov</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" href="#opasmi">o
+        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#">domov</a></li>
+        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#opasmi">o
                 pasmi</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" href="#billy">billy</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" href="#gallery">galerija</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" href="#video">Trikci</a></li>
+        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#billy">billy</a></li>
+        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#gallery">galerija</a>
+        </li>
+        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#video">Trikci</a></li>
     </ul>
 
 
@@ -98,7 +99,7 @@
                         Jack Russell terier je nastal na začetku 19. stoletja v Veliki Britaniji. Pasmo, kot jo
                         poznamo
                         danes, je
-                        ustvaril častiti John Russell, ki je pri svojih lovskih pohodih potreboval psa, ki je dovolj
+                        ustvaril častiti <span id="JoRTrigger" class="composition">John Russell</span>, ki je pri svojih lovskih pohodih potreboval psa, ki je dovolj
                         majhen, da iz
                         brloga prežene lisico, ter hkrati dovolj sposoben ob konju preteči daljše razdalje. Za lov
                         so
@@ -106,8 +107,7 @@
                         bele pse, da so se na terenu vidno razlikovali od lovne divjadi. Iz že obstoječega fox
                         terierja
                         sta nastali
-                        dve različici, ki sta se razvili v ločeni pasmi, višji Parson Russell terier in nižji Jack
-                        Russell terier.
+                        dve različici, ki sta se razvili v ločeni pasmi, višji <span id="PaRTrigger" class="composition">Parson Russell terier</span> in nižji  <span id="JaRTrigger" class="composition">Jack Russell terier</span>.
                         Jack Russell je bil še dolgo uporabljan za lov in je šele v zadnjih desetletjih postal
                         priljubljen kot
                         družinski pes.
@@ -117,24 +117,26 @@
                     <div class="imageComposition">
                         <figure class="imageComposition__photo imageComposition__photo--p1">
                             <picture>
-                                <source srcset="assets/img/jackRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/jackRussell.jpg" alt="JackRussell">
+                                <source data-srcset="assets/img/jackRussell-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/jackRussell.jpg"
+                                    alt="JackRussell">
                             </picture>
                             <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
                                 JackRussell</figcapture>
                         </figure>
                         <figure class="imageComposition__photo imageComposition__photo--p2">
                             <picture>
-                                <source srcset="assets/img/parsonRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/parsonRussell.jpg"
+                                <source data-srcset="assets/img/parsonRussell-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/parsonRussell.jpg"
                                     alt="Parsonrusell">
                             </picture>
                             <figcapture class="imageComposition__photo--caption">ParsonRusell</figcapture>
                         </figure>
                         <figure class="imageComposition__photo imageComposition__photo--p3">
                             <picture>
-                                <source srcset="assets/img/johnRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/johnRussell.jpg" alt="JohnRussell">
+                                <source data-srcset="assets/img/johnRussell-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/johnRussell.jpg"
+                                    alt="JohnRussell">
                             </picture>
                             <figcapture class="imageComposition__photo--caption">Mr.JohnRussell</figcapture>
                         </figure>
@@ -160,9 +162,9 @@
                         močan, z visoko nasajenim repom, ki ga v gibanju ponosno nosi naravnost navzgor. Pri Jack
                         Russell
                         terierju
-                        poznamo tri tipe dlake ‘smooth’ ali kratkodlaki, ‘wired’ ali resasti, vmesni tip pa se
+                        poznamo tri tipe dlake <span class = composition>‘smooth’</span> ali kratkodlaki, <span class = composition>‘wired’</span> ali resasti, vmesni tip pa se
                         imenuje
-                        ‘broken’.
+                        <span class = composition>‘broken’</span>.
                         Po telesu mora prevladovati bela barva s črnimi oziroma rjavimi oznakami. V gibanju je
                         poskočen,
                         z dobro
@@ -174,23 +176,26 @@
                     <div class="imageComposition">
                         <figure class="imageComposition__photo imageComposition__photo--p1">
                             <picture>
-                                <source srcset="assets/img/wired-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/wired.jpg" alt="wired">
+                                <source data-srcset="assets/img/wired-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/wired.jpg"
+                                    alt="wired">
                             </picture>
                             <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
                                 wired</figcapture>
                         </figure>
                         <figure class="imageComposition__photo imageComposition__photo--p2">
                             <picture>
-                                <source srcset="assets/img/smooth-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/smooth.jpg" alt="smooth">
+                                <source data-srcset="assets/img/smooth-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/smooth.jpg"
+                                    alt="smooth">
                             </picture>
                             <figcapture class="imageComposition__photo--caption">smooth</figcapture>
                         </figure>
                         <figure class="imageComposition__photo imageComposition__photo--p3">
                             <picture>
-                                <source srcset="assets/img/broken-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image" src="assets/img/broken.jpg" alt="broken">
+                                <source data-srcset="assets/img/broken-small.jpg" media="(max-width: 37.5em)">
+                                <img class="imageComposition__image lazyload" data-src="assets/img/broken.jpg"
+                                    alt="broken">
                             </picture>
                             <figcapture class="imageComposition__photo--caption">broken</figcapture>
                         </figure>
@@ -298,9 +303,10 @@
                 </div>
                 <div class="col-1-of-2 u-column-hover-animation reveal">
                     <picture>
-                        <source srcset="assets/img/billy-small.jpg" media="(max-width:37.5em)">
-                        <source srcset="assets/img/billy-large.jpg" media="(min-width: 112.5em)">
-                        <img srcset="assets/img/billy-medium.jpg" alt="BILLY" class="section-billy__photo">
+                        <source data-srcset="assets/img/billy-small.jpg" media="(max-width:37.5em)">
+                        <source data-srcset="assets/img/billy-large.jpg" media="(min-width: 112.5em)">
+                        <img data-srcset="assets/img/billy-medium.jpg" alt="BILLY"
+                            class="section-billy__photo lazyload">
                     </picture>
 
                 </div>
@@ -355,7 +361,7 @@
                         <a class="gallery__nav gallery__nav--prev"><i class="fas fa-chevron-left"></i></a>
                         <a class="gallery__nav gallery__nav--next"><i class="fas fa-chevron-right"></i></a>
                         <a class="gallery__expand"><i class="fas fa-expand"></i></a>
-                        
+
                     </div>
                 </div>
                 <div class="col-1-of-2">
@@ -424,15 +430,15 @@
                     <div class="footer__navigation">
                         <p class="paragraph">Povezave</p>
                         <ul class="footer__lists">
-                            <li class="footer__lists_list"><a class="footer__lists_list--link"
+                            <li class="footer__lists_list footer__lists_list--inline"><a class="footer__lists_list--link"
                                     href="http://ursvesper.si/" target="_blank">Ur`s Vesper</a>
                             </li>
-                            <li class="footer__lists_list"><a class="footer__lists_list--link"
+                            <li class="footer__lists_list footer__lists_list--inline"><a class="footer__lists_list--link"
                                     href="https://www.skt.si/" target="_blank">SKT</a></li>
-                            <li class="footer__lists_list"><a class="footer__lists_list--link"
+                            <li class="footer__lists_list footer__lists_list--inline"><a class="footer__lists_list--link"
                                     href="http://kanina.si/barf/" target="_blank">KaninaBARF</a>
                             </li>
-                            <li class="footer__lists_list"><a class="footer__lists_list--link"
+                            <li class="footer__lists_list footer__lists_list--inline"><a class="footer__lists_list--link"
                                     href="https://www.therealjackrussell.com" target="_blank">therealjackrussell.com</a>
                             </li>
                         </ul>
@@ -446,62 +452,62 @@
                     <div class="footer__copyright">
                         <p class="paragraph .u-center-text">
                             Viri o pasmi so pridobljeni na internetni strani <span><a
-                                    class="footer__lists_list footer__lists_list--link"
+                                    class="footer__lists_list footer__lists_list--inline footer__lists_list--link"
                                     href="https://www.dogbreedinfo.com/index.htm"
                                     target="_blank">dogbreedinfo.com</a></span>
                             Naslovno fotografijo in fotografije v drugi galeriji ja posnel <span><a
-                                    class="footer__lists_list footer__lists_list--link" href="https://500px.com/berto"
+                                    class="footer__lists_list  footer__lists_list--inline  footer__lists_list--link" href="https://500px.com/berto"
                                     target="_blank">Sandi Bertoncelj</a></span>.
                         </p>
                     </div>
                 </div>
-                <p class="paragraph">&copy <strong>Jaka Košir</strong> 2020</p>
+                <p class="paragraph u-center-text">&copy <strong>Jaka Košir</strong> 2020</p>
             </div>
         </div>
     </footer>
 
     <div class="popupGallery">
         <div class="popupGallery__gallery">
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                 class="popupGallery__gallery_photo--image">
-             <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-         </figure>
-         <figure class="popupGallery__hidden">
-             <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                 class="popupGallery__gallery_photo--image">
-             <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/poziram1.jpg" alt="poziram1.jpg" class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph">poziram</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph">fletn</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph">trimanje</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
-                 class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph ">kralj dnevne</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph">lumberjack</figcapture>
-         </figure>
-         <figure class="popupGallery__gallery_photo">
-             <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="popupGallery__gallery_photo--image">
-             <figcapture class="popupGallery__gallery_photo--capture paragraph">pocitek</figcapture>
-         </figure>
-         <a class="gallery__nav popupGallery__nav--prev"><i class="fas fa-chevron-left"></i></a>
-         <a class="gallery__nav popupGallery__nav--next"><i class="fas fa-chevron-right"></i></a>
-     </div>
-     <a class="popupGallery__close"><i class="fas fa-times"></i></a>
- </div>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
+                    class="popupGallery__gallery_photo--image">
+                <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
+            </figure>
+            <figure class="popupGallery__hidden">
+                <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
+                    class="popupGallery__gallery_photo--image">
+                <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/poziram1.jpg" alt="poziram1.jpg" class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph">poziram</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph">fletn</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph">trimanje</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
+                    class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph ">kralj dnevne</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph">lumberjack</figcapture>
+            </figure>
+            <figure class="popupGallery__gallery_photo">
+                <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="popupGallery__gallery_photo--image">
+                <figcapture class="popupGallery__gallery_photo--capture paragraph">pocitek</figcapture>
+            </figure>
+            <a class="gallery__nav popupGallery__nav--prev"><i class="fas fa-chevron-left"></i></a>
+            <a class="gallery__nav popupGallery__nav--next"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <a class="popupGallery__close"><i class="fas fa-times"></i></a>
+    </div>
 
 
     <div class="popupGallery-1" id="popup1">

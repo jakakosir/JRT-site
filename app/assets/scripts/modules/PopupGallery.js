@@ -9,7 +9,6 @@ class PopupGallery {
     nextButton,
     prevButton
   ) {
-    //this.injectHTML();
     this.photos = photos;
     this.photoIndex = 1;
     this.popupPhotos = popupPhotos;
@@ -76,53 +75,7 @@ class PopupGallery {
     this.photoSlides((this.photoIndex = this.photoIndex + n));
   }
 
-  /* injectHTML() {
-    document.querySelector(".page").insertAdjacentHTML(
-      "beforeend",
-      `<div class="popupGallery">
-       <div class="popupGallery__gallery">
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                class="popupGallery__gallery_photo--image">
-            <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-        </figure>
-        <figure class="popupGallery__hidden">
-            <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                class="popupGallery__gallery_photo--image">
-            <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/poziram1.jpg" alt="poziram1.jpg" class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph">poziram</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph">fletn</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph">trimanje</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
-                class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph ">kralj dnevne</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph">lumberjack</figcapture>
-        </figure>
-        <figure class="popupGallery__gallery_photo">
-            <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="popupGallery__gallery_photo--image">
-            <figcapture class="popupGallery__gallery_photo--capture paragraph">pocitek</figcapture>
-        </figure>
-        <a class="gallery__nav popupGallery__nav--prev"><i class="fas fa-chevron-left"></i></a>
-        <a class="gallery__nav popupGallery__nav--next"><i class="fas fa-chevron-right"></i></a>
-    </div>
-    <a class="popupGallery__close"><i class="fas fa-times"></i></a>
-</div>`
-    );
-  } */
+  
 }
 
 export default PopupGallery;
