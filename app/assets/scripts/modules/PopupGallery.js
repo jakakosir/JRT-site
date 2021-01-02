@@ -43,7 +43,6 @@ class PopupGallery {
     this.popupGalleryGallery.classList.remove("popupGallery__gallery--opened");
   }
 
- 
   photoSlides(n) {
     let i;
     //GALLERY**********************************
@@ -74,8 +73,6 @@ class PopupGallery {
   changePhoto(n) {
     this.photoSlides((this.photoIndex = this.photoIndex + n));
   }
-
-  
 }
 
 export default PopupGallery;

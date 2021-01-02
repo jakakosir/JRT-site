@@ -4,7 +4,6 @@ import "../sass/main.scss";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
 
-
 ///////////////SPINNER-SCRIPT////////////////////////
 
 document.onreadystatechange = setTimeout(function () {

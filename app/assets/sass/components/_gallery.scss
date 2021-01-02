@@ -19,8 +19,6 @@
         position: relative;
          top:0;
          left:0;
-        //display: block;
-
         animation: fade;
         animation-duration: 1s;
         animation-timing-function:ease-out;
@@ -57,13 +55,11 @@
         cursor: pointer;
         color: white;
         z-index: 100;
-        //padding: 10px;
         border-radius: 50%;
         transition: all .3s ease;
 
         &:hover {
             font-size: 5rem;
-            //background-color: rgba($color-black-primary, .6);
 
             @include respond(tab-land) {
                 background-color: transparent;
