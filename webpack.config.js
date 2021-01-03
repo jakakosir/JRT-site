@@ -1,5 +1,5 @@
 const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
+//const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: "./app/assets/scripts/App.js",
@@ -20,6 +20,22 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          attributes: {
+            list: [
+              {
+                tag: 'use',
+                attribute: 'xlink:href',
+                type: 'src',
+              },
+            ]
+          },
+        }
+      },
+
+      {
         test: /\.scss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
@@ -30,11 +46,8 @@ module.exports = {
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
         loader:'file-loader',
-       /*  options:{
-          outputPath:'fonts'
-        } */
       }
     ],
   },
-  plugins: [new TerserPlugin()],
+  //plugins: [new TerserPlugin()],
 };

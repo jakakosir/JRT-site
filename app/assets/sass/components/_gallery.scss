@@ -49,21 +49,18 @@
 
     &__nav {
         position: absolute;
-        font-size: 4rem;
+        width: 4rem;
+        height: 4rem;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        color: white;
+        fill: white;
         z-index: 100;
-        border-radius: 50%;
         transition: all .3s ease;
 
         &:hover {
-            font-size: 5rem;
-
-            @include respond(tab-land) {
-                background-color: transparent;
-            }
+            width: 4.5rem;
+            height: 4.5rem;
         }
         
 
@@ -81,11 +78,11 @@
     &__expand {
         position: absolute;
         cursor: pointer;
-        padding: 0 1rem;
-        font-size: 4rem;
-        color: white;
-        bottom: 2%;
-        right: 2%;
+        fill: white;
+        width: 4rem;
+        height: 4rem;
+        bottom: 5%;
+        right:3%;
         opacity: 0; 
         transition: all .3s ease;
         
@@ -94,7 +91,8 @@
         
 
         &:hover {
-           transform: scale(1.2),
+            width: 4.5rem;
+            height: 4.5rem;
         }
     }
 }

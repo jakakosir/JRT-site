@@ -22,8 +22,8 @@
     text-align: center;
 
     &_icon {
-      font-size: 7rem;
-      color: $color-grey;
+      width: 10rem;
+      fill: $color-grey;
       transition: all 0.3s;
       margin-right: 2rem;
 
@@ -33,31 +33,31 @@
 
       &--insta {
         @include respond(tab-port) {
-          color: white;
+          fill: white;
         }
 
         &:hover {
-          color: white;
+          fill: white;
         }
       }
 
       &--youtu {
         @include respond(tab-port) {
-          color: $color-red-primary;
+          fill: $color-red-primary;
         }
 
         &:hover {
-          color: $color-red-primary;
+          fill: $color-red-primary;
         }
       }
 
       &--face {
         @include respond(tab-port) {
-          color: rgb(66, 103, 178);
+          fill: rgb(66, 103, 178);
         }
 
         &:hover {
-          color: rgb(66, 103, 178);
+          fill: rgb(66, 103, 178);
         }
       }
     }

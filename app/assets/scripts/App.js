@@ -1,8 +1,9 @@
-import "@fortawesome/fontawesome-free/js/all.js";
+import '../img/sprite.svg'
 import "lazysizes";
 import "../sass/main.scss";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
+
 
 ///////////////SPINNER-SCRIPT////////////////////////
 
