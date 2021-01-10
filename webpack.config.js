@@ -1,13 +1,79 @@
+const currentTask = process.env.npm_lifecycle_event;
 const path = require("path");
-//const TerserPlugin = require("terser-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const fse = require("fs-extra");
+const { map } = require("lodash");
 
-module.exports = {
+class RunAfterCompile {
+  //copying images//
+  apply(compiler) {
+    compiler.hooks.done.tap("Copy images", function () {
+      fse.copySync("./app/assets/img", "./docs/assets/img");
+    });
+  }
+}
+
+let cssConfig = {
+  test: /\.scss$/i,
+  use: ["css-loader", "sass-loader"],
+};
+
+let pages = fse
+  .readdirSync("./app")
+  .filter(function (file) {
+    return file.endsWith(".html");
+  })
+  .map(function (page) {
+    return new HtmlWebpackPlugin({
+      filename: page,
+      template: `./app/${page}`,
+    });
+  });
+
+let config = {
   entry: "./app/assets/scripts/App.js",
-  output: {
+  plugins: pages,
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          attributes: {
+            list: [
+              {
+                tag: "use",
+                attribute: "xlink:href", //for SVGs//
+                type: "src",
+              },
+            ],
+          },
+        },
+      },
+      cssConfig,
+      {
+        test: /\.(png|jpg)$/,
+        use: ["file-loader"],
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        loader: "file-loader",
+      },
+    ],
+  },
+};
+
+if (currentTask == "dev") {
+  cssConfig.use.unshift("style-loader");
+  config.output = {
     filename: "bundled.js",
     path: path.resolve(__dirname, "app"),
-  },
-  devServer: {
+    publicPath: "",
+  };
+
+  config.devServer = {
     before: function (app, server) {
       server._watch("./app/**/*.html");
     },
@@ -15,39 +81,38 @@ module.exports = {
     hot: true,
     port: 3000,
     host: "0.0.0.0",
-  },
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          attributes: {
-            list: [
-              {
-                tag: 'use',
-                attribute: 'xlink:href',
-                type: 'src',
-              },
-            ]
-          },
-        }
-      },
+  };
+  config.mode = "development";
+}
 
-      {
-        test: /\.scss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+if (currentTask == "build") {
+  config.module.rules.push({
+    test: /\.js$/,
+    exclude: /(node_modules)/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
       },
-      {
-        test: /\.(png|jpg)$/,
-        use: ["file-loader"],
-      },
-      {
-        test: /\.(svg|eot|woff|woff2|ttf)$/,
-        loader:'file-loader',
-      }
-    ],
-  },
-  //plugins: [new TerserPlugin()],
-};
+    },
+  });
+
+  cssConfig.use.unshift(MiniCssExtractPlugin.loader);
+  config.output = {
+    filename: "[name].[chunkhash].js",
+    chunkFilename: "[name].[chunkhash].js",
+    path: path.resolve(__dirname, "docs"),
+    publicPath: "",
+  };
+  config.mode = "production";
+  config.optimization = {
+    splitChunks: { chunks: "all" },
+  };
+  config.plugins.push(
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: "styles.[chunkhash].css" }),
+    new RunAfterCompile()
+  );
+}
+
+module.exports = config;

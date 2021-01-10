@@ -1,13 +1,12 @@
-import '../img/sprite.svg'
+import "../img/sprite.svg";
 import "lazysizes";
 import "../sass/main.scss";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
 
-
 ///////////////SPINNER-SCRIPT////////////////////////
 
-document.onreadystatechange = setTimeout(function () {
+document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     document.querySelector("page").style.visibility = "hidden";
     document.querySelector("#spinnerLoader").style.visibility = "visible";
@@ -15,7 +14,7 @@ document.onreadystatechange = setTimeout(function () {
     document.querySelector("#spinnerLoader").style.display = "none";
     document.querySelector("page").style.visibility = "visible";
   }
-}, 2000);
+};
 ///////////////////////////////////////////////////////
 
 new RevealOnScroll();
