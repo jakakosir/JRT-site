@@ -22,16 +22,13 @@
     text-align: center;
 
     &_icon {
-      width: 10rem;
+      width: 6rem;
       fill: $color-grey;
       transition: all 0.3s;
-      margin-right: 2rem;
-
-      &:not(:last-child) {
-        margin-right: 2rem;
-      }
+      
 
       &--insta {
+        margin-right: 2rem;
         @include respond(tab-port) {
           fill: white;
         }
@@ -42,6 +39,7 @@
       }
 
       &--youtu {
+        margin-right: 2rem;
         @include respond(tab-port) {
           fill: $color-red-primary;
         }

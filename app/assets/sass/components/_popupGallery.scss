@@ -67,10 +67,6 @@
       @include respond(tab-port) {
         left: -4rem;
       }
-
-      @include respond(phone) {
-        right: -2rem;
-      }
     }
 
     &--next {
@@ -78,10 +74,6 @@
 
       @include respond(tab-port) {
         right: -4rem;
-      }
-     
-      @include respond(phone) {
-        right: -2rem;
       }
     }
   }
@@ -95,6 +87,7 @@
     height: 7rem;
     fill: white;
     padding: 1.5rem 1.5rem 0rem 1.5rem;
+    transition: 0.3s;
 
     @include respond(tab-port) {
       top: 2rem;
@@ -102,9 +95,10 @@
     }
 
     @include respond(phone) {
-        top: 20%;
-        right: 2%;
-      }
+      top: 80%;
+      right: 50%;
+      transform: translateX(50%);
+    }
 
     &:hover {
       width: 7.5rem;
