@@ -96,11 +96,13 @@ document.querySelector(".gallery-1__expand").addEventListener("click", (e) => {
   }
 });
 
-new ImgComposition();
+/* new ImgComposition(); */
 
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 20,
 });
+
+
 
 if (module.hot) {
   module.hot.accept();

@@ -106,7 +106,7 @@ if (currentTask == "build") {
   };
   config.mode = "production";
   config.optimization = {
-    splitChunks: { chunks: "all" },
+    splitChunks: { chunks: "all", minSize:1000, name:"vendor"},
   };
   config.plugins.push(
     new CleanWebpackPlugin(),
