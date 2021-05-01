@@ -4,17 +4,23 @@ import "../sass/main.scss";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
 
-///////////////SPINNER-SCRIPT////////////////////////
+///////////////FOUC prevention////////////////////////
 
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    document.querySelector("page").style.visibility = "hidden";
-    document.querySelector("#spinnerLoader").style.visibility = "visible";
-  } else {
-    document.querySelector("#spinnerLoader").style.display = "none";
-    document.querySelector("page").style.visibility = "visible";
-  }
-};
+
+let page = document.getElementById('page')
+let spinner = document.getElementById('spinnerLoader')
+
+
+let displayPage = () => {
+  spinner.style.display = 'none';
+  page.style.visibility = 'visible';
+}
+
+displayPage()
+
+
+
+
 ///////////////////////////////////////////////////////
 
 new RevealOnScroll();

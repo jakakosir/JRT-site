@@ -20,546 +20,558 @@
 </head>
 
 
-
-<div class="spinnerLoader" id="spinnerLoader"> </div>
-<div class="page" id="page">
-    <div class="navigation">
-        <div class="navigation__button">
-            <div class="navigation__button_icon" id="bar2"></div>
-            <div class="navigation__button_icon navigation__button_icon--1" id="bar1"></div>
-            <div class="navigation__button_icon navigation__button_icon--3" id="bar3"></div>
+<body>
+    <div style="display: block;" class="spinnerLoader" id="spinnerLoader"> </div>
+    <div style = "visibility: hidden;" class="page" id="page">
+        <div class="navigation">
+            <div class="navigation__button">
+                <div class="navigation__button_icon" id="bar2"></div>
+                <div class="navigation__button_icon navigation__button_icon--1" id="bar1"></div>
+                <div class="navigation__button_icon navigation__button_icon--3" id="bar3"></div>
+            </div>
+            <div class="navigation__background" id="background"></div>
         </div>
-        <div class="navigation__background" id="background"></div>
-    </div>
-
-    <div class="menu"></div>
-    <ul class="menu__list" id="menu">
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#">domov</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#opasmi">o
-                pasmi</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#billy">billy</a></li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#gallery">galerija</a>
-        </li>
-        <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#video">Trikci</a></li>
-    </ul>
-
-
-    <header class="header">
-        <div class="header__heading">
-            <h1 class="heading">
-                <span class="heading__main">Billy the Jack Russell terrier</span>
-                <span class="heading__sub">...the best dog in the world !</span>
-            </h1>
-            <svg class="buttonBone buttonBone__animated " width="17.5rem" height="8.5rem">
-
-                <a href="#billy">
-                    <circle cx="2.25rem" cy="2.25rem" r="2.25rem" fill="rgb(175, 10, 10)" />
-                    <circle cx="15rem" cy="6rem" r="2.25rem" fill="rgb(175, 10, 10)" />
-                    <circle cx="2.25rem" cy="6rem" r="2.25rem" fill="rgb(175, 10, 10)" />
-                    <circle cx="15rem" cy="2.25rem" r="2.25rem" fill="rgb(175, 10, 10)" />
-                    <rect width="11rem" height="5rem" x="3.1rem" y="1.6rem" fill="rgb(175, 10, 10)" />
-
-                    <text class="buttonBone__text" x="8.5rem" y="4.8rem" text-anchor="middle" aligment-baseline="middle"
-                        fill="white">
-                        billy
-                    </text>
-                </a>
-            </svg>
-
-        </div>
-    </header>
-
-    <main>
-        <section class="section-aboutBreed" id="about-breed">
-            <div class="row">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary" id="opasmi">O pasmi</h2>
-                </div>
-                <div class="col-1-of-2 reveal">
-                    <div class="u-center-text u-margin-bottom-small">
-                        <h3 class="heading-terthiary">Zgodovina</h3>
-                    </div>
-                    <p class="paragraph">
-                        Jack Russell terier je nastal na začetku 19. stoletja v Veliki Britaniji. Pasmo, kot jo
-                        poznamo
-                        danes, je
-                        ustvaril častiti <span class="composition">John Russell</span>, ki je pri svojih
-                        lovskih pohodih potreboval psa, ki je dovolj
-                        majhen, da iz
-                        brloga prežene lisico, ter hkrati dovolj sposoben ob konju preteči daljše razdalje. Za lov
-                        so
-                        raje izbirali
-                        bele pse, da so se na terenu vidno razlikovali od lovne divjadi. Iz že obstoječega fox
-                        terierja
-                        sta nastali
-                        dve različici, ki sta se razvili v ločeni pasmi, višji <span class="composition">Parson Russell
-                            terier</span> in nižji <span class="composition">Jack Russell terier</span>.
-                        Jack Russell je bil še dolgo uporabljan za lov in je šele v zadnjih desetletjih postal
-                        priljubljen kot
-                        družinski pes.
-                    </p>
-                </div>
-                <div class="col-1-of-2 reveal">
-                    <div class="imageComposition">
-                        <figure class="imageComposition__photo imageComposition__photo--p1">
-                            <picture>
-                                <source data-srcset="assets/img/jackRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/jackRussell.jpg"
-                                    alt="JackRussell">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
-                                JackRussell</figcapture>
-                        </figure>
-                        <figure class="imageComposition__photo imageComposition__photo--p2">
-                            <picture>
-                                <source data-srcset="assets/img/parsonRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/parsonRussell.jpg"
-                                    alt="Parsonrusell">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption">ParsonRusell</figcapture>
-                        </figure>
-                        <figure class="imageComposition__photo imageComposition__photo--p3">
-                            <picture>
-                                <source data-srcset="assets/img/johnRussell-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/johnRussell.jpg"
-                                    alt="JohnRussell">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption">Mr.JohnRussell</figcapture>
-                        </figure>
-                    </div>
-                </div>
+    
+        <div class="menu"></div>
+        <ul class="menu__list" id="menu">
+            <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#">domov</a></li>
+            <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#opasmi">o
+                    pasmi</a></li>
+            <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#billy">billy</a></li>
+            <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#gallery">galerija</a>
+            </li>
+            <li class="menu__list_listItem"><a class="menu__list_listItem--link" data-scroll href="#video">Trikci</a></li>
+        </ul>
+    
+    
+        <header class="header">
+            <div class="header__heading">
+                <h1 class="heading">
+                    <span class="heading__main">Billy the Jack Russell terrier</span>
+                    <span class="heading__sub">...the best dog in the world !</span>
+                </h1>
+                <svg class="buttonBone buttonBone__animated " width="17.5rem" height="8.5rem">
+    
+                    <a href="#billy">
+                        <circle cx="2.25rem" cy="2.25rem" r="2.25rem" fill="rgb(175, 10, 10)" />
+                        <circle cx="15rem" cy="6rem" r="2.25rem" fill="rgb(175, 10, 10)" />
+                        <circle cx="2.25rem" cy="6rem" r="2.25rem" fill="rgb(175, 10, 10)" />
+                        <circle cx="15rem" cy="2.25rem" r="2.25rem" fill="rgb(175, 10, 10)" />
+                        <rect width="11rem" height="5rem" x="3.1rem" y="1.6rem" fill="rgb(175, 10, 10)" />
+    
+                        <text class="buttonBone__text" x="8.5rem" y="4.8rem" text-anchor="middle" aligment-baseline="middle"
+                            fill="white">
+                            billy
+                        </text>
+                    </a>
+                </svg>
+    
             </div>
-            <div class="row">
-                <div class="col-1-of-2 reveal">
-                    <div class="u-center-text u-margin-bottom-small">
-                        <h3 class="heading-terthiary">Videz</h3>
+        </header>
+    
+        <main>
+            <section class="section-aboutBreed" id="about-breed">
+                <div class="row">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary" id="opasmi">O pasmi</h2>
                     </div>
-                    <p class="paragraph">
-                        To so psi majhne rasti – tehtajo okoli 6 kg, samci v višino merijo do 30 cm, samice pa so
-                        nekoliko
-                        manjše.
-                        Ima dolgo telo na nekoliko krajših mišičastih nogah, vendar pa je kljub temu izredno močan
-                        in
-                        agilen.
-                        Glava
-                        mora biti ploska s širokim gobcem in temnim nosom ter očmi. Prsni koš ni pretirano globok,
-                        hrbet
-                        raven in
-                        močan, z visoko nasajenim repom, ki ga v gibanju ponosno nosi naravnost navzgor. Pri Jack
-                        Russell
-                        terierju
-                        poznamo tri tipe dlake <span class=composition>‘smooth’</span> ali kratkodlaki, <span
-                            class=composition>‘wired’</span> ali resasti, vmesni tip pa se
-                        imenuje
-                        <span class=composition>‘broken’</span>.
-                        Po telesu mora prevladovati bela barva s črnimi oziroma rjavimi oznakami. V gibanju je
-                        poskočen,
-                        z dobro
-                        koordinacijo.
-                    </p>
-                </div>
-
-                <div class="col-1-of-2 reveal">
-                    <div class="imageComposition">
-                        <figure class="imageComposition__photo imageComposition__photo--p1">
-                            <picture>
-                                <source data-srcset="assets/img/wired-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/wired.jpg"
-                                    alt="wired">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
-                                wired</figcapture>
-                        </figure>
-                        <figure class="imageComposition__photo imageComposition__photo--p2">
-                            <picture>
-                                <source data-srcset="assets/img/smooth-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/smooth.jpg"
-                                    alt="smooth">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption">smooth</figcapture>
-                        </figure>
-                        <figure class="imageComposition__photo imageComposition__photo--p3">
-                            <picture>
-                                <source data-srcset="assets/img/broken-small.jpg" media="(max-width: 37.5em)">
-                                <img class="imageComposition__image lazyload" data-src="assets/img/broken.jpg"
-                                    alt="broken">
-                            </picture>
-                            <figcapture class="imageComposition__photo--caption">broken</figcapture>
-                        </figure>
+                    <div class="col-1-of-2 reveal">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h3 class="heading-terthiary">Zgodovina</h3>
+                        </div>
+                        <p class="paragraph">
+                            Jack Russell terier je nastal na začetku 19. stoletja v Veliki Britaniji. Pasmo, kot jo
+                            poznamo
+                            danes, je
+                            ustvaril častiti <span class="composition">John Russell</span>, ki je pri svojih
+                            lovskih pohodih potreboval psa, ki je dovolj
+                            majhen, da iz
+                            brloga prežene lisico, ter hkrati dovolj sposoben ob konju preteči daljše razdalje. Za lov
+                            so
+                            raje izbirali
+                            bele pse, da so se na terenu vidno razlikovali od lovne divjadi. Iz že obstoječega fox
+                            terierja
+                            sta nastali
+                            dve različici, ki sta se razvili v ločeni pasmi, višji <span class="composition">Parson Russell
+                                terier</span> in nižji <span class="composition">Jack Russell terier</span>.
+                            Jack Russell je bil še dolgo uporabljan za lov in je šele v zadnjih desetletjih postal
+                            priljubljen kot
+                            družinski pes.
+                        </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-2 reveal">
-                    <div class="u-center-text u-margin-bottom-small">
-                        <h3 class="heading-terthiary">Temperament</h3>
-                    </div>
-                    <p class="paragraph">Jack Russell terier je živahen pes velikega karakterja, z neskončnim
-                        veseljem
-                        do življenja. Do
-                        lastnika
-                        je zelo vdan in ljubeč, vendar pa mu mora le-ta pri vzgoji že zgodaj postaviti pravila in
-                        pri
-                        njih
-                        vztrajati, saj se v nasprotnem primeru lahko pojavi agresija do psov, pretirano lajanje in
-                        druge
-                        neželene
-                        lastnosti. Do tujcev je prijazen, otroke pa moramo naučiti pravilnega rokovanja s psom.
-                        Izredno
-                        radi se
-                        igrajo, kar lahko lastnik dobro uporabi kot motivacijo pri šolanju. So zelo inteligentna
-                        pasma,
-                        zmožni
-                        so
-                        se naučiti ogromno trikov, vendar pa se zaradi svoje hiperaktivnosti hitro naveličajo
-                        ponavljajočih se
-                        ukazov. Lastnik je tako primoran šolanje za psa narediti čim bolj zanimivo. Najbolj se
-                        obnesejo
-                        kratke
-                        vaje, z malo ponovitvami in psu ljubo nagrado, kot je na primer met žogice ali igra vlečenja
-                        vrvi. Zelo
-                        uspešni so tudi pri pasjih športih, kot je na primer agility.
-                    </p>
-                </div>
-
-                <div class="col-1-of-2 reveal">
-                    <div class="u-center-text u-margin-bottom-small">
-                        <h3 class="heading-terthiary">Nega in zdravje</h3>
-                    </div>
-                    <p class="paragraph">Vsi trije tipi dlake so lahki za vzdrževanje, saj ne potrebujejo posebne
-                        nege
-                        ali striženja.
-                        Kopanje
-                        je potrebno le redko, saj nimajo močnega vonja. Kot mnogo živali bele barve, so tudi Jack
-                        Russell
-                        terierji nagnjeni k gluhosti. Pojavijo se lahko tudi bolezni oči in izpah pogačice, vendar
-                        pa so te
-                        bolezni v veliki meri dedne in se jim lahko izognemo, če mladiča izberemo pri dobrem
-                        vzreditelju, ki
-                        odgovorno pari samo zdrave živali, kar dokazuje tudi rodovnik.
-
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="section-billy">
-            <div class="row">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 id="billy" class="heading-secondary">Billy</h2>
-                </div>
-
-                <div class="col-1-of-2 reveal">
-                    <p class="paragraph paragraph__billy"> Billy je kuža pasme Jack Russell terrier, zelo velik pes v
-                        malem telesu.
-                        Njegovo
-                        plemiško (rodovniško) ime je Victorius Upright, mi pa smo ga poimenovali Billy. Billy
-                        prihaja iz Rusije tako, da
-                        je že kot zelo majhen prepotoval pol Evrope. Najprej je z letalom letel iz Murmanska v Moskvo
-                        nato pa so
-                        nam ga z avtom
-                        preko Belorusije, Poljske, Češke in Avstrije pripeljali do Kranja. Da smo ga iz Rusije, ki
-                        ni članica EU pripeljali v Slovenijo je bilo
-                        potrebno kar precej truda in organizacije (pridobitev vseh potrebnih veterinarskih
-                        dokumentov itn..). Pri tem mi je s svojimi
-                        izkušnjami pomagal prijatelj Uroš Klemenc, ki se tudi sam ukvarja z vzrejo Jack-ov saj je
-                        lastnik psarne <span class="footer__lists_list"><a class="footer__lists_list--link"
-                                href="http://ursvesper.si/" target="_blank">Ur`s Vesper</a></span>.
-                        Billy se je skotil 27.11.2015 v psarni Delight-Desoul katere lastnica je ga. Luidmila
-                        Shesteryakova. Njegov oče je <span class="footer__lists_list"><a
-                                class="footer__lists_list--link" href="http://ingrus.net/russell/en/details.php?id=6749"
-                                target="_blank">GANG-STAFF
-                                GOLDEN KEY</a></span>. mama
-                        pa AMANDA-ORI POLARIS. Na prigovarjanja Uroša smo se na začetku udeležili nekaj pasjih
-                        razstav vendar z Billy-em nikdar nisva uspela prepričati sodnikov
-                        zato smo to zelo hitro opustili. Ker je njegovo vedenje klub veliko pozornosti in treninga
-                        postajalo vse bolj neznosno (agresija do drugih psov, uriniranje po stanovanju
-                        , neposlušnost in svojeglavost) smo se pri petnajstih mesecih starosti odločili za
-                        kastracijo in ni nam žal. Billy je danes zelo prijeten in prijazen a še vedno zelo živahen
-                        kuža, ki zna veliko trikcev. Zelo rad gre na sprehod na polje, občasno pa tudi z menoj na
-                        kolo. Neskončno uživa tudi ko je z menoj in prijatelji v gozdu in 'pomaga' graditi 'traile'.
-                        Želimo si, da bi čim dlje ostal med nami zato tudi skrbimo za njegovo zdravje in kvalitetno
-                        prehrano. Billy že od otroštva je zgolj surovo hrano in sicer <span
-                            class="footer__lists_list"><a class="footer__lists_list--link" href="http://kanina.si/barf/"
-                                target="_blank">KaninaBARF</a></span>.
-                        Billy je res faca in ga imamo zelo zelo radi!
-
-
-
-                    </p>
-                </div>
-                <div class="col-1-of-2 u-column-hover-animation reveal">
-                    <picture>
-                        <source data-srcset="assets/img/billy-small.jpg" media="(max-width:37.5em)">
-                        <source data-srcset="assets/img/billy-large.jpg" media="(min-width: 112.5em)">
-                        <img data-srcset="assets/img/billy-medium.jpg" alt="BILLY"
-                            class="section-billy__photo lazyload">
-                    </picture>
-
-                </div>
-            </div>
-        </section>
-        <section class="section-gallery">
-            <div class="bgVideo">
-                <video class="bgVideo__content" autoplay muted loop>
-                    <source src="assets/img/BgBilly.mp4">
-                    <source src="assets/img/BgBilly.webm">
-                </video>
-
-            </div>
-            <div class="row">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary" id="gallery">Foto</h2>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="paragraph">Nekaj slikic iz Billijevega vsakdana. Ko je bil še majhen, tudi s svojimi
-                        bratci in sestricami.</p>
-                    <div class="gallery">
-                        <figure class="gallery__photo">
-                            <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                                class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/poziram1.jpg" alt="poziram1.jpgg" class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">poziram</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">fletn</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">trimanje</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
-                                class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph ">kralj dnevne</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">lumberjack</figcapture>
-                        </figure>
-                        <figure class="gallery__photo">
-                            <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="gallery__photo--image">
-                            <figcapture class="gallery__photo--capture paragraph">pocitek</figcapture>
-                        </figure>
-                        <a><svg class="gallery__nav gallery__nav--prev">
-                                <use xlink:href="assets/img/sprite.svg#icon-back"></use>
-                            </svg></a>
-                        <a><svg class="gallery__nav gallery__nav--next">
-                                <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
-                            </svg></a>
-                        <a><svg class="gallery__expand">
-                                <use xlink:href="assets/img/sprite.svg#icon-expand"></use>
-                            </svg>
-                        </a>
-
+                    <div class="col-1-of-2 reveal">
+                        <div class="imageComposition">
+                            <figure class="imageComposition__photo imageComposition__photo--p1">
+                                <picture>
+                                    <source data-srcset="assets/img/jackRussell-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/jackRussell.jpg"
+                                        alt="JackRussell">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
+                                    JackRussell</figcapture>
+                            </figure>
+                            <figure class="imageComposition__photo imageComposition__photo--p2">
+                                <picture>
+                                    <source data-srcset="assets/img/parsonRussell-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/parsonRussell.jpg"
+                                        alt="Parsonrusell">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption">ParsonRusell</figcapture>
+                            </figure>
+                            <figure class="imageComposition__photo imageComposition__photo--p3">
+                                <picture>
+                                    <source data-srcset="assets/img/johnRussell-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/johnRussell.jpg"
+                                        alt="JohnRussell">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption">Mr.JohnRussell</figcapture>
+                            </figure>
+                        </div>
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <p class="paragraph">Fotografije je posnel Sandi Bertoncelj na kolesarskem izletu na
-                        Planico
-                        pri Kranju.</p>
-                    <div class="gallery-1">
-                        <figure class="gallery-1__photo">
-                            <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="gallery-1__photo--image">
-                        </figure>
-                        <figure class="gallery-1__photo">
-                            <img src="assets/img/naKolesu2.jpg" alt="naKolesu2.jpg" class="gallery-1__photo--image">
-                        </figure>
-                        <figure class="gallery-1__photo">
-                            <img src="assets/img/naKolesu3.jpg" alt="naKolesu3.jpg" class="gallery-1__photo--image">
-                        </figure>
-                        <figure class="gallery-1__photo">
-                            <img src="assets/img/naKolesu4.jpg" alt="naKolesu4.jpg" class="gallery-1__photo--image">
-                        </figure>
-                        <figure class="gallery-1__photo">
-                            <img src="assets/img/naKolesu5.jpg" alt="naKolesu5.jpg" class="gallery-1__photo--image">
-                        </figure>
-                        <a><svg class="gallery__nav gallery-1__nav--prev">
-                                <use xlink:href="assets/img/sprite.svg#icon-back"></use>
-                            </svg></a>
-                        <a><svg class="gallery__nav gallery-1__nav--next">
-                                <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
-                            </svg></a>
-                        <a><svg class="gallery-1__expand">
-                                <use xlink:href="assets/img/sprite.svg#icon-expand"></use>
-                            </svg>
-                        </a>
+                <div class="row">
+                    <div class="col-1-of-2 reveal">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h3 class="heading-terthiary">Videz</h3>
+                        </div>
+                        <p class="paragraph">
+                            To so psi majhne rasti – tehtajo okoli 6 kg, samci v višino merijo do 30 cm, samice pa so
+                            nekoliko
+                            manjše.
+                            Ima dolgo telo na nekoliko krajših mišičastih nogah, vendar pa je kljub temu izredno močan
+                            in
+                            agilen.
+                            Glava
+                            mora biti ploska s širokim gobcem in temnim nosom ter očmi. Prsni koš ni pretirano globok,
+                            hrbet
+                            raven in
+                            močan, z visoko nasajenim repom, ki ga v gibanju ponosno nosi naravnost navzgor. Pri Jack
+                            Russell
+                            terierju
+                            poznamo tri tipe dlake <span class=composition>‘smooth’</span> ali kratkodlaki, <span
+                                class=composition>‘wired’</span> ali resasti, vmesni tip pa se
+                            imenuje
+                            <span class=composition>‘broken’</span>.
+                            Po telesu mora prevladovati bela barva s črnimi oziroma rjavimi oznakami. V gibanju je
+                            poskočen,
+                            z dobro
+                            koordinacijo.
+                        </p>
+                    </div>
+    
+                    <div class="col-1-of-2 reveal">
+                        <div class="imageComposition">
+                            <figure class="imageComposition__photo imageComposition__photo--p1">
+                                <picture>
+                                    <source data-srcset="assets/img/wired-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/wired.jpg"
+                                        alt="wired">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption imageComposition__photo--caption-3">
+                                    wired</figcapture>
+                            </figure>
+                            <figure class="imageComposition__photo imageComposition__photo--p2">
+                                <picture>
+                                    <source data-srcset="assets/img/smooth-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/smooth.jpg"
+                                        alt="smooth">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption">smooth</figcapture>
+                            </figure>
+                            <figure class="imageComposition__photo imageComposition__photo--p3">
+                                <picture>
+                                    <source data-srcset="assets/img/broken-small.jpg" media="(max-width: 37.5em)">
+                                    <img class="imageComposition__image lazyload" data-src="assets/img/broken.jpg"
+                                        alt="broken">
+                                </picture>
+                                <figcapture class="imageComposition__photo--caption">broken</figcapture>
+                            </figure>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section-video">
-            <div class="row">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary" id="video">trikci</h2>
-                </div>
-                <div class="col-1-of-2">
-                    <h3 class="heading-terthiary">Retro Billy</h3>
-                    <video width="400" class="video" controls>
-                        <source src="assets/img/RetroBilly.mp4">
-                        <source src="assets/img/RetroBilly.webm">
-                    </video>
-                </div>
-                <div class="col-1-of-2">
-                    <h3 class="heading-terthiary">Billy pospravlja Žogice</h3>
-                    <video width="400" class="video" controls>
-                        <source src="assets/img/pospravlja.mp4">
-                        <source src="assets/img/pospravlja.webm">
-                    </video>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="row">
-            <div class="col-1-of-2">
-                <div class="footer__left">
-                    <div class="footer__social">
-                        <a href="https://www.instagram.com/jakakosir/" target="_blank"><svg
-                                class="footer__social_icon footer__social_icon--insta">
-                                <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
-                            </svg></a>
-                        <a href="https://www.youtube.com/channel/UCsueNm8mCasr1n6EKauEYRQ/videos?view=0&sort=dd&view_as=subscriber&shelf_id=0"
-                            target="_blank"><svg class="footer__social_icon footer__social_icon--youtu">
-                                <use xlink:href="assets/img/sprite.svg#icon-youtube"></use>
-                            </svg></a>
-                        <a href="https://www.facebook.com/BillyTheJackRussellTerrier/" target="_blank"><svg
-                                class="footer__social_icon footer__social_icon--face">
-                                <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
-                            </svg></a>
+    
+                <div class="row">
+                    <div class="col-1-of-2 reveal">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h3 class="heading-terthiary">Temperament</h3>
+                        </div>
+                        <p class="paragraph">Jack Russell terier je živahen pes velikega karakterja, z neskončnim
+                            veseljem
+                            do življenja. Do
+                            lastnika
+                            je zelo vdan in ljubeč, vendar pa mu mora le-ta pri vzgoji že zgodaj postaviti pravila in
+                            pri
+                            njih
+                            vztrajati, saj se v nasprotnem primeru lahko pojavi agresija do psov, pretirano lajanje in
+                            druge
+                            neželene
+                            lastnosti. Do tujcev je prijazen, otroke pa moramo naučiti pravilnega rokovanja s psom.
+                            Izredno
+                            radi se
+                            igrajo, kar lahko lastnik dobro uporabi kot motivacijo pri šolanju. So zelo inteligentna
+                            pasma,
+                            zmožni
+                            so
+                            se naučiti ogromno trikov, vendar pa se zaradi svoje hiperaktivnosti hitro naveličajo
+                            ponavljajočih se
+                            ukazov. Lastnik je tako primoran šolanje za psa narediti čim bolj zanimivo. Najbolj se
+                            obnesejo
+                            kratke
+                            vaje, z malo ponovitvami in psu ljubo nagrado, kot je na primer met žogice ali igra vlečenja
+                            vrvi. Zelo
+                            uspešni so tudi pri pasjih športih, kot je na primer agility.
+                        </p>
                     </div>
-                    <div class="footer__navigation">
-                        <p class="paragraph">Povezave</p>
-                        <ul class="footer__lists">
-                            <li class="footer__lists_list footer__lists_list--inline"><a
-                                    class="footer__lists_list--link" href="http://ursvesper.si/" target="_blank">Ur`s
-                                    Vesper</a>
-                            </li>
-                            <li class="footer__lists_list footer__lists_list--inline"><a
-                                    class="footer__lists_list--link" href="https://www.skt.si/" target="_blank">SKT</a>
-                            </li>
-                            <li class="footer__lists_list footer__lists_list--inline"><a
-                                    class="footer__lists_list--link" href="http://kanina.si/barf/"
-                                    target="_blank">KaninaBARF</a>
-                            </li>
-                            <li class="footer__lists_list footer__lists_list--inline"><a
-                                    class="footer__lists_list--link" href="https://www.therealjackrussell.com"
-                                    target="_blank">therealjackrussell.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="col-1-of-2">
-                <div class="footer__right">
-                    <div class="footer__copyright">
-                        <p class="paragraph .u-center-text">
-                            Viri o pasmi so pridobljeni na internetni strani <span><a
-                                    class="footer__lists_list footer__lists_list--inline footer__lists_list--link"
-                                    href="https://www.dogbreedinfo.com/index.htm"
-                                    target="_blank">dogbreedinfo.com</a></span>
-                            Naslovno fotografijo in fotografije v drugi galeriji ja posnel <span><a
-                                    class="footer__lists_list  footer__lists_list--inline  footer__lists_list--link"
-                                    href="https://500px.com/berto" target="_blank">Sandi Bertoncelj</a></span>.
+    
+                    <div class="col-1-of-2 reveal">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h3 class="heading-terthiary">Nega in zdravje</h3>
+                        </div>
+                        <p class="paragraph">Vsi trije tipi dlake so lahki za vzdrževanje, saj ne potrebujejo posebne
+                            nege
+                            ali striženja.
+                            Kopanje
+                            je potrebno le redko, saj nimajo močnega vonja. Kot mnogo živali bele barve, so tudi Jack
+                            Russell
+                            terierji nagnjeni k gluhosti. Pojavijo se lahko tudi bolezni oči in izpah pogačice, vendar
+                            pa so te
+                            bolezni v veliki meri dedne in se jim lahko izognemo, če mladiča izberemo pri dobrem
+                            vzreditelju, ki
+                            odgovorno pari samo zdrave živali, kar dokazuje tudi rodovnik.
+    
                         </p>
                     </div>
                 </div>
-                <p class="paragraph u-center-text">&copy <strong>Jaka Košir</strong> 2021</p>
+            </section>
+            <section class="section-billy">
+                <div class="row">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 id="billy" class="heading-secondary">Billy</h2>
+                    </div>
+    
+                    <div class="col-1-of-2 reveal">
+                        <p class="paragraph paragraph__billy"> Billy je kuža pasme Jack Russell terrier, zelo velik pes v
+                            malem telesu.
+                            Njegovo
+                            plemiško (rodovniško) ime je Victorius Upright, mi pa smo ga poimenovali Billy. Billy
+                            prihaja iz Rusije tako, da
+                            je že kot zelo majhen prepotoval pol Evrope. Najprej je z letalom letel iz Murmanska v Moskvo
+                            nato pa so
+                            nam ga z avtom
+                            preko Belorusije, Poljske, Češke in Avstrije pripeljali do Kranja. Da smo ga iz Rusije, ki
+                            ni članica EU pripeljali v Slovenijo je bilo
+                            potrebno kar precej truda in organizacije (pridobitev vseh potrebnih veterinarskih
+                            dokumentov itn..). Pri tem mi je s svojimi
+                            izkušnjami pomagal prijatelj Uroš Klemenc, ki se tudi sam ukvarja z vzrejo Jack-ov saj je
+                            lastnik psarne <span class="footer__lists_list"><a class="footer__lists_list--link"
+                                    href="http://ursvesper.si/" target="_blank">Ur`s Vesper</a></span>.
+                            Billy se je skotil 27.11.2015 v psarni Delight-Desoul katere lastnica je ga. Luidmila
+                            Shesteryakova. Njegov oče je <span class="footer__lists_list"><a
+                                    class="footer__lists_list--link" href="http://ingrus.net/russell/en/details.php?id=6749"
+                                    target="_blank">GANG-STAFF
+                                    GOLDEN KEY</a></span>. mama
+                            pa AMANDA-ORI POLARIS. Na prigovarjanja Uroša smo se na začetku udeležili nekaj pasjih
+                            razstav vendar z Billy-em nikdar nisva uspela prepričati sodnikov
+                            zato smo to zelo hitro opustili. Ker je njegovo vedenje klub veliko pozornosti in treninga
+                            postajalo vse bolj neznosno (agresija do drugih psov, uriniranje po stanovanju
+                            , neposlušnost in svojeglavost) smo se pri petnajstih mesecih starosti odločili za
+                            kastracijo in ni nam žal. Billy je danes zelo prijeten in prijazen a še vedno zelo živahen
+                            kuža, ki zna veliko trikcev. Zelo rad gre na sprehod na polje, občasno pa tudi z menoj na
+                            kolo. Neskončno uživa tudi ko je z menoj in prijatelji v gozdu in 'pomaga' graditi 'traile'.
+                            Želimo si, da bi čim dlje ostal med nami zato tudi skrbimo za njegovo zdravje in kvalitetno
+                            prehrano. Billy že od otroštva je zgolj surovo hrano in sicer <span
+                                class="footer__lists_list"><a class="footer__lists_list--link" href="http://kanina.si/barf/"
+                                    target="_blank">KaninaBARF</a></span>.
+                            Billy je res faca in ga imamo zelo zelo radi!
+    
+    
+    
+                        </p>
+                    </div>
+                    <div class="col-1-of-2 u-column-hover-animation reveal">
+                        <picture>
+                            <source data-srcset="assets/img/billy-small.jpg" media="(max-width:37.5em)">
+                            <source data-srcset="assets/img/billy-large.jpg" media="(min-width: 112.5em)">
+                            <img data-srcset="assets/img/billy-medium.jpg" alt="BILLY"
+                                class="section-billy__photo lazyload">
+                        </picture>
+    
+                    </div>
+                </div>
+            </section>
+            <section class="section-gallery">
+                <div class="bgVideo">
+                    <video class="bgVideo__content" autoplay muted loop>
+                        <source src="assets/img/BgBilly.mp4">
+                        <source src="assets/img/BgBilly.webm">
+                    </video>
+    
+                </div>
+                <div class="row">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary" id="gallery">Foto</h2>
+                    </div>
+                    <div class="col-1-of-2">
+                        <p class="paragraph">Nekaj slikic iz Billijevega vsakdana. Ko je bil še majhen, tudi s svojimi
+                            bratci in sestricami.</p>
+                        <div class="gallery">
+                            <figure class="gallery__photo">
+                                <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
+                                    class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/poziram1.jpg" alt="poziram1.jpgg" class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">poziram</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">fletn</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">trimanje</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
+                                    class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph ">kralj dnevne</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">lumberjack</figcapture>
+                            </figure>
+                            <figure class="gallery__photo">
+                                <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="gallery__photo--image">
+                                <figcapture class="gallery__photo--capture paragraph">pocitek</figcapture>
+                            </figure>
+                            <a><svg class="gallery__nav gallery__nav--prev">
+                                    <use xlink:href="assets/img/sprite.svg#icon-back"></use>
+                                </svg></a>
+                            <a><svg class="gallery__nav gallery__nav--next">
+                                    <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
+                                </svg></a>
+                            <a><svg class="gallery__expand">
+                                    <use xlink:href="assets/img/sprite.svg#icon-expand"></use>
+                                </svg>
+                            </a>
+    
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <p class="paragraph">Fotografije je posnel Sandi Bertoncelj na kolesarskem izletu na
+                            Planico
+                            pri Kranju.</p>
+                        <div class="gallery-1">
+                            <figure class="gallery-1__photo">
+                                <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="gallery-1__photo--image">
+                            </figure>
+                            <figure class="gallery-1__photo">
+                                <img src="assets/img/naKolesu2.jpg" alt="naKolesu2.jpg" class="gallery-1__photo--image">
+                            </figure>
+                            <figure class="gallery-1__photo">
+                                <img src="assets/img/naKolesu3.jpg" alt="naKolesu3.jpg" class="gallery-1__photo--image">
+                            </figure>
+                            <figure class="gallery-1__photo">
+                                <img src="assets/img/naKolesu4.jpg" alt="naKolesu4.jpg" class="gallery-1__photo--image">
+                            </figure>
+                            <figure class="gallery-1__photo">
+                                <img src="assets/img/naKolesu5.jpg" alt="naKolesu5.jpg" class="gallery-1__photo--image">
+                            </figure>
+                            <a><svg class="gallery__nav gallery-1__nav--prev">
+                                    <use xlink:href="assets/img/sprite.svg#icon-back"></use>
+                                </svg></a>
+                            <a><svg class="gallery__nav gallery-1__nav--next">
+                                    <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
+                                </svg></a>
+                            <a><svg class="gallery-1__expand">
+                                    <use xlink:href="assets/img/sprite.svg#icon-expand"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-video">
+                <div class="row">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary" id="video">trikci</h2>
+                    </div>
+                    <div class="col-1-of-2">
+                        <h3 class="heading-terthiary">Retro Billy</h3>
+                        <video width="400" class="video" controls>
+                            <source src="assets/img/RetroBilly.mp4">
+                            <source src="assets/img/RetroBilly.webm">
+                        </video>
+                    </div>
+                    <div class="col-1-of-2">
+                        <h3 class="heading-terthiary">Billy pospravlja Žogice</h3>
+                        <video width="400" class="video" controls>
+                            <source src="assets/img/pospravlja.mp4">
+                            <source src="assets/img/pospravlja.webm">
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__left">
+                        <div class="footer__social">
+                            <a href="https://www.instagram.com/jakakosir/" target="_blank"><svg
+                                    class="footer__social_icon footer__social_icon--insta">
+                                    <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
+                                </svg></a>
+                            <a href="https://www.youtube.com/channel/UCsueNm8mCasr1n6EKauEYRQ/videos?view=0&sort=dd&view_as=subscriber&shelf_id=0"
+                                target="_blank"><svg class="footer__social_icon footer__social_icon--youtu">
+                                    <use xlink:href="assets/img/sprite.svg#icon-youtube"></use>
+                                </svg></a>
+                            <a href="https://www.facebook.com/BillyTheJackRussellTerrier/" target="_blank"><svg
+                                    class="footer__social_icon footer__social_icon--face">
+                                    <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
+                                </svg></a>
+                        </div>
+                        <div class="footer__navigation">
+                            <p class="paragraph">Povezave</p>
+                            <ul class="footer__lists">
+                                <li class="footer__lists_list footer__lists_list--inline"><a
+                                        class="footer__lists_list--link" href="http://ursvesper.si/" target="_blank">Ur`s
+                                        Vesper</a>
+                                </li>
+                                <li class="footer__lists_list footer__lists_list--inline"><a
+                                        class="footer__lists_list--link" href="https://www.skt.si/" target="_blank">SKT</a>
+                                </li>
+                                <li class="footer__lists_list footer__lists_list--inline"><a
+                                        class="footer__lists_list--link" href="http://kanina.si/barf/"
+                                        target="_blank">KaninaBARF</a>
+                                </li>
+                                <li class="footer__lists_list footer__lists_list--inline"><a
+                                        class="footer__lists_list--link" href="https://www.therealjackrussell.com"
+                                        target="_blank">therealjackrussell.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+    
+                </div>
+                <div class="col-1-of-2">
+                    <div class="footer__right">
+                        <div class="footer__copyright">
+                            <p class="paragraph .u-center-text">
+                                Viri o pasmi so pridobljeni na internetni strani <span><a
+                                        class="footer__lists_list footer__lists_list--inline footer__lists_list--link"
+                                        href="https://www.dogbreedinfo.com/index.htm"
+                                        target="_blank">dogbreedinfo.com</a></span>
+                                Naslovno fotografijo in fotografije v drugi galeriji ja posnel <span><a
+                                        class="footer__lists_list  footer__lists_list--inline  footer__lists_list--link"
+                                        href="https://500px.com/berto" target="_blank">Sandi Bertoncelj</a></span>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="paragraph u-center-text">&copy <strong>Jaka Košir</strong> 2021</p>
+                </div>
             </div>
-        </div>
-    </footer>
-
-    <div class="popupGallery">
-        <div class="popupGallery__gallery">
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                    class="popupGallery__gallery_photo--image">
-                <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-            </figure>
-            <figure class="popupGallery__hidden">
-                <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
-                    class="popupGallery__gallery_photo--image">
-                <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/poziram1.jpg" alt="poziram1.jpg" class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph">poziram</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph">fletn</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph">trimanje</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
-                    class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph ">kralj dnevne</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph">lumberjack</figcapture>
-            </figure>
-            <figure class="popupGallery__gallery_photo">
-                <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="popupGallery__gallery_photo--image">
-                <figcapture class="popupGallery__gallery_photo--capture paragraph">pocitek</figcapture>
-            </figure>
-            <a><svg class="gallery__nav popupGallery__nav--prev">
-                    <use xlink:href="assets/img/sprite.svg#icon-back"></use>
+        </footer>
+    
+        <div class="popupGallery">
+            <div class="popupGallery__gallery">
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
+                        class="popupGallery__gallery_photo--image">
+                    <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
+                </figure>
+                <figure class="popupGallery__hidden">
+                    <img src="assets/img/pasjaDruzinica.jpg" alt="pasjaDruzinica.jpg"
+                        class="popupGallery__gallery_photo--image">
+                    <figcapture class="gallery__photo--capture paragraph">pasja družinica</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/poziram1.jpg" alt="poziram1.jpg" class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph">poziram</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/fletn.jpg" alt="fletn.jpg" class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph">fletn</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/trimanje.jpg" alt="trimanje.jpg" class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph">trimanje</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/kingLivingroom.jpg" alt="kingLivingroom.jpg"
+                        class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph ">kralj dnevne</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/lumberjack1.jpg" alt="lumberjack.jpg" class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph">lumberjack</figcapture>
+                </figure>
+                <figure class="popupGallery__gallery_photo">
+                    <img src="assets/img/pocitek.jpg" alt="pocitek.jpg" class="popupGallery__gallery_photo--image">
+                    <figcapture class="popupGallery__gallery_photo--capture paragraph">pocitek</figcapture>
+                </figure>
+                <a><svg class="gallery__nav popupGallery__nav--prev">
+                        <use xlink:href="assets/img/sprite.svg#icon-back"></use>
+                    </svg></a>
+                <a><svg class="gallery__nav popupGallery__nav--next">
+                        <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
+                    </svg></a>
+            </div>
+            <a><svg class="popupGallery__close">
+                    <use xlink:href="assets/img/sprite.svg#icon-close"></use>
                 </svg></a>
-            <a><svg class="gallery__nav popupGallery__nav--next">
-                    <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
+        </div>
+    
+    
+        <div class="popupGallery-1" id="popup1">
+            <div class="popupGallery-1__gallery">
+                <figure class="popupGallery-1__gallery_photo">
+                    <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <figure class="popupGallery-1__hidden">
+                    <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <figure class="popupGallery-1__gallery_photo">
+                    <img src="assets/img/naKolesu2.jpg" alt="naKolesu2.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <figure class="popupGallery-1__gallery_photo">
+                    <img src="assets/img/naKolesu3.jpg" alt="naKolesu3.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <figure class="popupGallery-1__gallery_photo">
+                    <img src="assets/img/naKolesu4.jpg" alt="naKolesu4.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <figure class="popupGallery-1__gallery_photo">
+                    <img src="assets/img/naKolesu5.jpg" alt="naKolesu5.jpg" class="popupGallery-1__gallery_photo--image">
+                </figure>
+                <a><svg class="gallery__nav popupGallery-1__nav--prev">
+                        <use xlink:href="assets/img/sprite.svg#icon-back"></use>
+                    </svg></a>
+                <a><svg class="gallery__nav popupGallery-1__nav--next">
+                        <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
+                    </svg></a>
+            </div>
+            <a><svg class="popupGallery-1__close">
+                    <use xlink:href="assets/img/sprite.svg#icon-close"></use>
                 </svg></a>
         </div>
-        <a><svg class="popupGallery__close">
-                <use xlink:href="assets/img/sprite.svg#icon-close"></use>
-            </svg></a>
+    
     </div>
+    
+    
+      
 
 
-    <div class="popupGallery-1" id="popup1">
-        <div class="popupGallery-1__gallery">
-            <figure class="popupGallery-1__gallery_photo">
-                <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <figure class="popupGallery-1__hidden">
-                <img src="assets/img/naKolesu1.jpg" alt="naKolesu1.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <figure class="popupGallery-1__gallery_photo">
-                <img src="assets/img/naKolesu2.jpg" alt="naKolesu2.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <figure class="popupGallery-1__gallery_photo">
-                <img src="assets/img/naKolesu3.jpg" alt="naKolesu3.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <figure class="popupGallery-1__gallery_photo">
-                <img src="assets/img/naKolesu4.jpg" alt="naKolesu4.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <figure class="popupGallery-1__gallery_photo">
-                <img src="assets/img/naKolesu5.jpg" alt="naKolesu5.jpg" class="popupGallery-1__gallery_photo--image">
-            </figure>
-            <a><svg class="gallery__nav popupGallery-1__nav--prev">
-                    <use xlink:href="assets/img/sprite.svg#icon-back"></use>
-                </svg></a>
-            <a><svg class="gallery__nav popupGallery-1__nav--next">
-                    <use xlink:href="assets/img/sprite.svg#icon-forward"></use>
-                </svg></a>
-        </div>
-        <a><svg class="popupGallery-1__close">
-                <use xlink:href="assets/img/sprite.svg#icon-close"></use>
-            </svg></a>
-    </div>
 
-</div>
+
+
+
+
 
 </body>
+    
+
 
 </html>

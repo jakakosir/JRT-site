@@ -25,7 +25,10 @@
       width: 6rem;
       fill: $color-grey;
       transition: all 0.3s;
-      
+      margin: -5rem 0 -5rem;
+      @include respond(big-desk) {
+        margin: -3rem 0 -3rem;
+      }
 
       &--insta {
         margin-right: 2rem;
@@ -78,21 +81,21 @@
       transform: rotate(4deg);
       transition: 0.3s;
       box-shadow: 0.2rem 0.3rem 1rem black;
+      background-color: $color-black-primary;
 
       &--inline {
         transform: rotate(0);
-        color: $color-grey;
       }
 
       @include respond(tab-port) {
-        color: $color-red-primary;
-        box-shadow: 0.2rem 0.3rem 1rem black;
+        /* color: $color-red-primary; */
+        /*  box-shadow: 0.2rem 0.3rem 1rem black; */
       }
 
       &:hover {
         color: $color-red-primary;
         transform: scale(1.1);
-        transform: rotate(-4deg);
+        transform: rotate(-7deg);
       }
 
       &--link,
@@ -102,6 +105,12 @@
         font-size: $default-font-size;
         font-weight: 900;
         color: $color-grey;
+
+       
+
+        @include respond(tab-land) {
+          color: $color-red-primary;
+        }
 
         &:hover {
           color: $color-red-primary;
@@ -113,5 +122,14 @@
     padding-top: 1rem;
     border-top: 0.1rem solid $color-grey;
     border-bottom: 0.1rem solid $color-grey;
+  }
+
+  &__footerLinks {
+    @include respond(tab-land) {
+      color: $color-grey;
+    }
+  }
+  &__red {
+    color: $color-red-primary;
   }
 }

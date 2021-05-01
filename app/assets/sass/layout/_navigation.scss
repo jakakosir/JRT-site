@@ -33,6 +33,7 @@
     background-color: rgb(236, 224, 224);
     border-radius: 50%;
     cursor: pointer;
+  
 
     @include respond(tab-land) {
       transform: translateY(-0.3rem);
@@ -120,7 +121,7 @@
 
     &_triggered {
       transform: scale(100);
-    }
+    }   
   }
 }
 
@@ -130,6 +131,7 @@
   height: 100vh;
   top: 0;
   left: 0;
+  
  
   &__list {
     position: fixed;
@@ -147,6 +149,7 @@
       visibility: visible;
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
+      
     }
 
     &_listItem {
