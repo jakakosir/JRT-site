@@ -5,6 +5,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fse = require("fs-extra");
 const { map } = require("lodash");
+const autoprefixer = require("autoprefixer");
+const webpack = require("webpack");
+
+
 
 class RunAfterCompile {
   //copying images//
@@ -17,7 +21,7 @@ class RunAfterCompile {
 
 let cssConfig = {
   test: /\.scss$/i,
-  use: ["css-loader", "sass-loader"],
+  use: ["css-loader","postcss-loader", "sass-loader"],
 };
 
 let pages = fse
@@ -111,8 +115,19 @@ if (currentTask == "build") {
   config.plugins.push(
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "styles.[chunkhash].css" }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          autoprefixer()
+        ],
+       
+      }
+    },
+    
+    ),
     new RunAfterCompile()
   );
+
 }
 
 module.exports = config;
