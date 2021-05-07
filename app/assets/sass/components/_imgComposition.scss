@@ -1,130 +1,115 @@
 .imageComposition {
-    position: relative;
-    margin:-1rem 0rem 0rem 7rem;
+  position: relative;
+  margin: -1rem 0rem 0rem 7rem;
 
-    @include respond(tab-land) {
-        margin: 9rem 0rem 0rem 7rem;
-     }
+  @include respond(tab-land) {
+    margin: 9rem 0rem 0rem 7rem;
+  }
 
-     @include respond(tab-port) {
-        margin: -8rem -6rem 0rem -6rem;
-     }
+  @include respond(tab-port) {
+    margin: -8rem -6rem 0rem -6rem;
+  }
 
-    &__image {
-        width: 100%;
-        
-       
-    }
-    
-    &:hover &__photo:not(:hover) {
-        transform: scale(.9);
-    }
+  &__image {
+    width: 100%;
+  }
 
-    &__photo {
-        width: 40%;
-        position: absolute;
-        box-shadow: 0 1.5rem 2.5rem rgba($color-black, .5);
-        transition: all .5s;
-       
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
 
-        @include respond(tab-port) {
-           width: 33.3333%;
-           position: relative;
-           float: left;
-          
-        }
-       
+  &__photo {
+    width: 40%;
+    position: absolute;
+    box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.5);
+    transition: all 0.5s;
 
-        
-
-        &--caption {
-            position: absolute;
-            top: 50%;
-            left:50%;
-            color: $color-red-primary;
-            font-size: 1rem;
-            opacity:0;
-            text-shadow:  0 1.5rem 2.5rem rgba($color-black, .5);
-            transform: translate(-50%, -50%);
-            transition: all .5s
-        }
-
-        &:hover {
-            z-index: 100;
-            transform: scale(1.1);
-            outline: .2rem solid $color-red-primary;
-            outline-offset: .7rem;
-
-            @include respond(tab-port) {
-                transform: scale(1.1);
-                
-             }
-
-        }
-
-       
-        &:hover &--caption {
-            opacity:1;
-            top:-3rem;
-            font-size: $medium-font-size;
-            font-weight: 400;
-        }
-
-        &:hover &--caption-3 {
-            top:-10rem;
-
-            @include respond(tab-port) {
-                top: -3rem;
-                
-             }
-        }
-
-        
-
-        &--p1 {
-            top: 15rem;
-            left: 15.5rem;
-            z-index: 1;
-
-            @include respond(tab-port) {
-               top: 18rem;
-               left: 3rem;
-            }
-        }
-
-        &--p2{
-            top: 5rem;
-            left: 15rem;
-            z-index: 0;
-
-            @include respond(tab-port) {
-                top: 13rem;
-                left: 0rem;
-            }
-        }
-
-        &--p3 {
-            top: 7rem;
-            left: 3rem;
-            z-index: 2;
-
-            @include respond(tab-port) {
-                top: 10rem;
-                left: -3rem;
-            }
-        }
+    @include respond(tab-port) {
+      width: 33.3333%;
+      position: relative;
+      float: left;
     }
 
+    &--caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: $color-red-primary;
+      font-size: 1rem;
+      opacity: 0;
+      text-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.5);
+      transform: translate(-50%, -50%);
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      outline: 0.2rem solid $color-red-primary;
+      outline-offset: 0.7rem;
+
+      @include respond(tab-port) {
+        transform: scale(1.1);
+      }
+    }
+
+    &:hover &--caption {
+      opacity: 1;
+      top: -3rem;
+      font-size: $medium-font-size;
+      font-weight: 400;
+    }
+
+    &:hover &--caption-3 {
+      top: -10rem;
+
+      @include respond(tab-port) {
+        top: -3rem;
+      }
+    }
+
+    &--p1 {
+      top: 15rem;
+      left: 15.5rem;
+      z-index: 1;
+
+      @include respond(tab-port) {
+        top: 18rem;
+        left: 3rem;
+      }
+    }
+
+    &--p2 {
+      top: 5rem;
+      left: 15rem;
+      z-index: 0;
+
+      @include respond(tab-port) {
+        top: 13rem;
+        left: 0rem;
+      }
+    }
+
+    &--p3 {
+      top: 7rem;
+      left: 3rem;
+      z-index: 2;
+
+      @include respond(tab-port) {
+        top: 10rem;
+        left: -3rem;
+      }
+    }
+  }
 }
 
-
 .composition {
-    filter: drop-shadow(0 1.5rem 1rem black);
-    background-image: linear-gradient(45deg, red, $color-black-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    padding: 0.5rem 0.5rem;
-    margin: 0rem 0.5rem;
-    cursor: pointer;
+  /*  filter: drop-shadow(0 1.5rem 1rem black); */
+  background-image: linear-gradient(45deg, red, $color-black-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0.5rem 0.5rem;
+  margin: 0rem 0.5rem;
+  cursor: pointer;
 }

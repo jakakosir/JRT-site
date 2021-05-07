@@ -8,8 +8,6 @@ const { map } = require("lodash");
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 
-
-
 class RunAfterCompile {
   //copying images//
   apply(compiler) {
@@ -21,7 +19,7 @@ class RunAfterCompile {
 
 let cssConfig = {
   test: /\.scss$/i,
-  use: ["css-loader","postcss-loader", "sass-loader"],
+  use: ["css-loader", "postcss-loader", "sass-loader"],
 };
 
 let pages = fse
@@ -110,24 +108,13 @@ if (currentTask == "build") {
   };
   config.mode = "production";
   config.optimization = {
-    splitChunks: { chunks: "all", minSize:1000, name:"vendor"},
+    splitChunks: { chunks: "all", minSize: 1000, name: "vendor" },
   };
   config.plugins.push(
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "styles.[chunkhash].css" }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          autoprefixer()
-        ],
-       
-      }
-    },
-    
-    ),
+    new MiniCssExtractPlugin({ filename: "[name].[chunkhash].css" }),
     new RunAfterCompile()
   );
-
 }
 
 module.exports = config;

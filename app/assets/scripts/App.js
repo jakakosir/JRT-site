@@ -3,42 +3,45 @@ import "lazysizes";
 import "../sass/main.scss";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Gallery from "./modules/Gallery";
+import SmoothScroll from "smooth-scroll";
 
 ///////////////FOUC prevention////////////////////////
 
-
-let page = document.getElementById('page')
-let spinner = document.getElementById('spinnerLoader')
-
+let page = document.getElementById("page");
+let spinner = document.getElementById("spinnerLoader");
 
 let displayPage = () => {
-  spinner.style.display = 'none';
-  page.style.visibility = 'visible';
-}
+  spinner.style.display = "none";
+  page.style.visibility = "visible";
+};
 
-displayPage()
-
-
-
+displayPage();
 
 ///////////////////////////////////////////////////////
 
 new RevealOnScroll();
 
-let openNavigation;
-document.querySelector(".navigation__button").addEventListener("click", (e) => {
+let OpenNavigation;
+let firstOpeningFunction = (e) => {
   e.preventDefault;
-  if (typeof openNavigation == "undefined") {
+  if (typeof OpenNavigation == "undefined") {
     import(/* webpackChunkName: 'openNavigation' */ "./modules/OpenNavigation")
       .then((x) => {
-        openNavigation = new x.default();
-        setTimeout(openNavigation.toggleMenu(), 20);
+        OpenNavigation = new x.default();
+        setTimeout(OpenNavigation.toggleMenu(), 20);
+        document
+          .querySelector(".navigation__button")
+          .removeEventListener("click", firstOpeningFunction);
       })
       .catch(() => console.log("Something went wrong..."));
   } else {
     OpenNavigation.toggleMenu();
   }
-});
+};
+
+document
+  .querySelector(".navigation__button")
+  .addEventListener("click", firstOpeningFunction);
 
 new Gallery(
   document.querySelectorAll(".gallery__photo"),
@@ -102,13 +105,10 @@ document.querySelector(".gallery-1__expand").addEventListener("click", (e) => {
   }
 });
 
-/* new ImgComposition(); */
-
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 20,
+  speed: 600,
+  easing: 'easeOutQuart',
 });
-
-
 
 if (module.hot) {
   module.hot.accept();

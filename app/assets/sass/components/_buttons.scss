@@ -1,34 +1,31 @@
 //BONE SHAPED BUTTON
 .buttonBone {
-    display: inline-block;
-    font-size: $default-font-size;
-    text-transform: uppercase;
-    color: $color-grey;
-    letter-spacing: .5rem;
+  display: inline-block;
+  font-size: $default-font-size;
+  text-transform: uppercase;
+  color: $color-grey;
+  letter-spacing: 0.5rem;
 
-   @include respond(tab-land) {
-    transform: translateY(-.3rem);
+  @include respond(tab-land) {
+    transform: translateY(-0.3rem);
     filter: drop-shadow(0 2.3rem 1rem rgba($color-black, 0.5));
-   }
-   
-    
-    &:hover {
-        transform: translateY(-.3rem);
-        filter: drop-shadow(0 2.3rem 1rem rgba($color-black, 0.5));
-    }
+  }
 
-    &:active {
-        transform: translateY(-.1rem);
-        filter: none;
-    }
+  &:hover {
+    transform: translateY(-0.3rem);
+    filter: drop-shadow(0 2.3rem 1rem rgba($color-black, 0.5));
+  }
 
+  &:active {
+    transform: translateY(-0.1rem);
+    filter: none;
+  }
 
-    &__animated {
-        animation: rubberBand;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 2.5s;
-        animation-fill-mode: backwards;
-    }
-
+  &__animated {
+    animation: rubberBand;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.5s;
+    animation-fill-mode: backwards;
+  }
 }

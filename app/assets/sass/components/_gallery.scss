@@ -1,98 +1,84 @@
-
 .gallery,
 .gallery-1 {
+  position: relative;
+  /* box-shadow: 0 1.5rem 2.5rem rgba($color-black, .5); */
+  margin: 2rem;
+
+  &:hover &__expand {
+    opacity: 1;
+  }
+
+  &:hover &__photo--capture {
+    opacity: 1;
+  }
+
+  &__photo {
+    width: 100%;
     position: relative;
-    box-shadow: 0 1.5rem 2.5rem rgba($color-black, .5);
-    margin: 2rem;
-    
+    top: 0;
+    left: 0;
+    animation: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
 
-    &:hover &__expand {
-        opacity: 1;
+    &--image {
+      width: 100%;
     }
 
-    &:hover &__photo--capture {
-        opacity: 1;
+    &--capture {
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 95%;
+      transform: translate(-50%, -50%);
+      color: white;
+      padding: 0 1rem;
+      background-color: rgba($color-black-primary, 0.6);
+      font-weight: 100;
+      opacity: 0;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    fill: white;
+    z-index: 100;
+    transition: all 0.3s ease;
+
+    &:hover {
+      width: 4.5rem;
+      height: 4.5rem;
     }
 
-    &__photo {
-        width:100%;
-        position: relative;
-         top:0;
-         left:0;
-        animation: fade;
-        animation-duration: 1s;
-        animation-timing-function:ease-out;
-        animation-fill-mode: backwards;
-
-       
-
-        
-
-        &--image {
-         width:100%; 
-         
-        }
-
-       &--capture {
-           display: inline-block;
-           position: absolute;
-           left: 50%;
-           top: 95%;
-           transform: translate(-50%, -50%);
-           color:white;
-           padding: 0 1rem;
-           background-color: rgba($color-black-primary, .6);
-           font-weight: 100;
-           opacity: 0;
-       }
+    &--prev {
+      left: 0;
     }
 
-    &__nav {
-        position: absolute;
-        width: 4rem;
-        height: 4rem;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        fill: white;
-        z-index: 100;
-        transition: all .3s ease;
-
-        &:hover {
-            width: 4.5rem;
-            height: 4.5rem;
-        }
-        
-
-        &--prev {
-            left :0;
-           
-        }
-
-        &--next {
-            right: 0;
-           
-        }
-    }  
-    
-    &__expand {
-        position: absolute;
-        cursor: pointer;
-        fill: white;
-        width: 4rem;
-        height: 4rem;
-        bottom: 5%;
-        right:3%;
-        opacity: 0; 
-        transition: all .3s ease;
-        
-        
-        
-        
-
-        &:hover {
-            width: 4.5rem;
-            height: 4.5rem;
-        }
+    &--next {
+      right: 0;
     }
+  }
+
+  &__expand {
+    position: absolute;
+    cursor: pointer;
+    fill: white;
+    width: 4rem;
+    height: 4rem;
+    bottom: 5%;
+    right: 3%;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
 }

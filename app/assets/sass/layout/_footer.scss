@@ -106,8 +106,6 @@
         font-weight: 900;
         color: $color-grey;
 
-       
-
         @include respond(tab-land) {
           color: $color-red-primary;
         }
