@@ -5,7 +5,7 @@
   padding: 3rem 0;
 
   &:not(:last-child) {
-    margin-bottom: $space-horizontal-min;
+    margin-bottom: $space-horizontal-small;
   }
 
   @include clearfix;
